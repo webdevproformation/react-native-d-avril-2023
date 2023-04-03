@@ -18,4 +18,8 @@ passer l'étape installation !!!
 => Avant d'aller écrire dans le dossier jour1-decouverte 
 => rappel / présentation de js => besoin au quotidien quand on utilise (React et React Native )
 
+js => page web mais aussi dans react native 
+
+=> 
+
 
