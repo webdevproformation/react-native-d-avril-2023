@@ -1,0 +1,134 @@
+nodejs => 
+
+jusque dans les années 2010 si vous aviez un code en Javascript => le seul et unique moyen de l'exécuter c'était de passer par une page html et un navigateur 
+
+// javascript 
+const a = { nom : "Alain" }
+console.log(a); 
+
+=> le mettre dans un fichier html => le fichier le faire exécuter dans un navigateur 
+=> dans tous les navigateurs => moteur Javascript (partie du navigateur web ) comprend le langage javascript et sait l'exécuter
+
+-------------------------
+
+à partir de 2010 => un développeur a décidé d'extraire le moteur Javascript (V8) du navigateur Chrome et 
+va l'entourée de C++ => NodeJS 
+
+V8 + C++ => NodeJS => outil qui permet d'exécuter du code Javascript HORS des navigateurs 
+
+
+------ 
+
+etape 1 => vérifier que tout le monde a bien nodejs installé ET exécuter un script js avec nodejs 
+
+etape 2 => npm outil qui installé en même temps que nodejs 
+
+npm --version
+
+Nodejs => outil qui permet exécuter du js hors du navigateur
+
+NPM => Node Package Manager => outil qui permet de télécharger des librairies en javascript 
+depuis le site internet npmjs.com 
+
+Gestionnaire de Paquet => outil télécharger des librairies sur votre disque dur 
+npmjs.com => répository dans lequel on va pouvoir télécharger des librairies (jquery)
+
+npm init --yes 
+# fichier package.json qui s'est créé dans le dossier jour1
+npm install jquery
+# dossier node_modules qui s'est créé dans le dossier jour1 
+
+package.json => fichier mis à la racine de notre projet 
+il a pour rôle de décrire notre projet sou format json 
+
+// objet en js
+{
+    nom : "découverte node"
+}
+
+// json 
+{
+    "nom" : "découverte node"
+}
+
+décrire le projet dont 2 propriétés intéressantes 
+- script => 
+- dependencies => les lib que l'on a téléchargé pour faire fonctionne notre projet 
+
+npm install jquery
+
+node_modules le dossier qui contient notre librairie que l'on a téléchargé
+dossier jquery > dist > plusieurs versions de jquery 
+
+-----------------------
+
+
+avant (et ça marche encore maintenant) pour installer react native 
+
+npm install --global expo-cli
+
+-----------------------
+
+maintenant => la mode actuelle 
+
+npm --exec create-expo-app --template
+
+cd ..
+npx create-expo-app --template
+npm --exec create-expo-app --template
+
+4 choix => Enter devant le 1er => projet vide (Blank)
+What is your app named? jour1-decouverte
+
+// 1 installé notre projet React native 
+// dans notre ordinateur 
+
+// télécharger un émulateur de smartphone 
+// => android studio 
+// editeur de texte qui permet de créer 
+// des applications 
+// DANS l'éditeur il y a une partie AVD 
+// AVD => Android Virtual Device 
+
+// => https://developer.android.com/studio/
+// fichier 1Go télécharger le fichier .exe (windows) // .pkg (MacOS)
+// install
+
+rdv 10h50 bon café !!!
+
+---------------------------
+
+=> vérifier que nodejs était installé sur l'ordinateur de tous les étudiants
+=> vérifier que npm était opérationnel 
+=> npx create-expo-app --template
+=> dans le terminal (installé react native )
+=> installé un logiciel android studio (https://developer.android.com/studio/)
+=> gros logiciel 
+=> Editeur de texte pour créer des applications mobiles xxxx 
+=> installer .......
+=> AVD => Android Virtual Device xxxx 
+
+=> 
+Lakssami
+=> installer le OS dans le téléphone virtuel => 
+=> driver 
+
+=> Lakssami (web) Maxime (ok !! ) Melvin (web) et Grace
+=> 13h35 bon appétit !!!!!!!!!!
+
+
+Pour Melvin 
+
+npx expo install react-native-web@~0.18.10 react-dom@18.2.0 @expo/webpack-config@^18.0.1
+
+npm run web 
+
+=> pause café => 14h35 bon café 
+=> tu peux faire 
+=> fin de l'installation REact native et Emulateur 
+=> communiquer projet <<<=====>>> Emulateur / page (web) !!!!
+
+=> bon café @ toute suite !!!
+
+=> Message pour Grace =>
+=> Milad va t'appeler pour te donner un coup de main

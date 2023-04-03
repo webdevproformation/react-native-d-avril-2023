@@ -1,0 +1,18 @@
+// react native 
+
+=> pour pouvoir travailler en local sur React native il faut obligatoirement installer 
+=> NodeJS 
+
+=> node --version
+
+=> automatique que vous avez installer nodejs en + un autre outil a été installé 
+
+npm --version 
+
+=> dans le terminal vous devez avoir un retour visuel 
+=> ce n'est pas grave 
+
+=> du moment où vous n'avez pas de message d'erreur type : commande inconnue - c'est bon 
+
+=> si vous avez la version > 12 de Node JS ça doit fonctionner 
+
