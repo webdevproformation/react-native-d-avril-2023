@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a = [1,2,3] ; 
+
+        // rechercher un élément dans un tableau 
+        // parcourir chaque l'élement d'un tableau 
+        // retourner la valeur si elle existe 
+        // find est une méthode High Order function // fonction de 1er ordre 
+        // fonction anonyme comme paramètre d'une fonction => callback 
+        // le callback va être exécuté autant de fois qu'il y a d'élément dans le tableau a  => 3 fois 
+        const recherche = a.find(function(item){
+            return item === 3
+        })
+        console.log(recherche); 
+
+        // version fonction fléchée
+        const recherche2 = a.find((item) => {
+            return item === 10
+        })
+        console.log(recherche2); 
+
+        // version fonction fléchée raccoucie sans () sans {} et sans return
+        const recherche3 = a.find( item => item === 3)
+        console.log(recherche3); 
+
+        // A connaitre ABSOLUMENT car elle est centrale dans React 
+        // for( of ) la méthode qui remplace les boucles 
+        // a.map(function(){})
+        // permet de retourner une nouvelle version du tableau a 
+        const aModifie1 = a.map(function(item){
+            return item + 1
+        })
+
+        console.log(aModifie1); // pris chaque item du tableau a augmenté de + 1 et stocké dans le tableau aModifie1
+
+        const aModifie2 = a.map(function(item){
+            return `<p>${item}</p>`
+        })
+        console.log(aModifie2); // [ "<p>1</p>", "<p>2</p>", "<p>3</p>" ]
+
+        /* const test = [1, "bonjour"].map(function(item){
+            if(typeof(item) === "number" ){
+                return item + 1
+            }else {
+                return item + " salut"
+            }
+        })
+        console.log(test) */
+        
+        // map() => transformer un tableau en un autre tableau 
+        // [1,2,3].map() => [ "<p>1</p>", "<p>2</p>", "<p>3</p>" ]
+        // boucle 
+        console.log(a.map(item => `<p>${item}</p>`))
+
+        // fonction reduce => permet de transformer une tableau en 1 valeur 
+        // Redux // useReducer() => React Native 
+        // a.reduce(function(){})
+
+        const b = [ 12 , 15, 20 ] ;
+
+        // faire la somme de tous les chiffres du tableau 12 + 15 + 20 
+        // 47
+        
+        let total = 0 ; // total 
+        for(let chiffre of b){
+            total += chiffre // chiffre 
+        }
+        console.log(total); 
+
+        // la même chose avec reduce()
+
+        const resultat = b.reduce(function(total , chiffre){
+            return total + chiffre 
+        } , 0)
+
+        console.log(resultat); // 47 
+
+        console.log(b.reduce((total , chiffre) => total + chiffre  , 0)); 
+
+        const textes = ["bonjour" , "Comment" , "allez vous ?"]
+    
+        console.log(textes.reduce(function(final, texte){
+            return `${final} ${texte}`;
+        } , ""));
+
+        const panier = [
+            {nom : "a" , prix : 10 , qte : 2}, // 20
+            {nom : "b" , prix : 30 , qte : 3}, // 90 // 110
+        ]
+
+        const totalPanier = panier.reduce(function(totalLigne , produit){
+            console.log(totalLigne)
+            return totalLigne + (produit.prix * produit.qte)
+        } , 0 )
+
+        console.log(totalPanier); 
+
+         // a.filter(function(){})
+
+         // permet d'extraire toutes les lignes qui répondent à un critère
+         const etudiantsNote = [
+            { nom : "Alain" , note : 15 },
+            { nom : "Benoit" , note : 8 },
+            { nom : "Céline" , note : 18},
+            { nom : "Denis" , note : 10 }
+          ];
+
+          // liste de tous les étudiants qui ont une note > 10 ??? 
+          
+          const etudiantAyantMoyenne = etudiantsNote.filter( function(item){
+            return item.note >= 10
+          })
+          console.log(etudiantAyantMoyenne);
+          
+          console.log(etudiantsNote.filter(item => item.note >= 0 ))
+
+
+
+
+         // destructuration
+         // import export 
+
+
+    </script>
+</body>
+</html>
