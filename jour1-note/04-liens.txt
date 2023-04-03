@@ -1,0 +1,21 @@
+toutes les notes de cours sont disponibles à l'adresse suivante :
+https://github.com/webdevproformation/react-native-d-avril-2023
+
+----------------------------
+
+support de cours :
+
+http://formation.webdevpro.net/react-native
+login : react-native
+password : facebook
+
+----------------------------
+
+Bravo !!! 
+passer l'étape installation !!! 
+
+
+=> Avant d'aller écrire dans le dossier jour1-decouverte 
+=> rappel / présentation de js => besoin au quotidien quand on utilise (React et React Native )
+
+
