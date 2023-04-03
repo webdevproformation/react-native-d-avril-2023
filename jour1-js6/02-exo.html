@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const exo = [1,2,3];
+        exo.splice(1 , 0 , "bonjour"); // [1,"bonjour" , 2 , 3]
+        exo.splice(2 , 0 , "comment allez vous"); // [1,"bonjour" , "comment allez vous" , 2 , 3]
+
+        // exo.splice (1 , 0 , "bonjour" ,"comment allez vous"); // remplace les deux instructions précédentes
+
+        exo.splice(3, 1) ;  // [1,"bonjour" , "comment allez vous"  , 3] // exo.splice(-2,1);
+        exo.shift() ; // ["bonjour" , "comment allez vous"  , 3] // exo.splice(0,1);
+        console.log(exo);
+    </script>
+
+    <script>
+        //const exo =[ 1, 2 ,3];
+        // exo.splice( 1 , 2 , "bonjour");
+
+        // exo.splice (2 , 0 , "bonjour" ,"comment allez vous");
+
+        // exo.shift(1); pas de valeur dans les () de shift()
+        // exo.shift();
+        console.log(exo);
+
+    </script>
+
+<script>
+    const tableau = [ 1, 2 , 3 ];
+    tableau.splice( 1, 0 , "bonjour");
+    console.log(tableau);
+    tableau.splice( 2, 0 , "comment allez vous");
+    console.log(tableau);
+    tableau.splice(3 ,1);
+    cosole.log(tableau);
+    tableau.shift();
+    console.log(tableau);
+</script>
+</body>
+</html>
