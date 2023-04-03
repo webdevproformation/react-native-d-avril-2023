@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // dans un fichier html de base (tous les concepts en sur browser / app mobile avec react native)
+
+        const a = [ 1,2,3 ];
+
+        // traitement que l'on peut faire avec un tableau => le parcourir
+        // for / for of
+
+        for(let item of a){ // très utilisé dans le monde web 
+            console.log(item); 
+        }
+
+        // boucle dans React / React Native 
+        // utiliser les méthodes du tableau a 
+
+        // a étant un tableau non seulement js va stocker dans la variable a
+        // [ 1,2,3 ];
+        // Mais en + (automatique)
+        // javascript va transformer en + la valeur a en un objet qui possède de nombreuses
+        /* a.map()
+        a.filter()
+        a.find()
+        a.indexOf()
+        a.reduce()
+        a.pop()
+        a.push()
+        a.slice() // slice de pizza => part
+        a.splice()
+        a.forEach()
+        a.join() */
+
+        // https://jschallenger.com/
+        // https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-javascript
+
+        // codeingame cours/exo et des clashofcode
+        // bien comprend et maitriser ces méthodes va vous permettre de bien React 
+
+
+        const b = [1,2,3];
+
+        // ajouter une valeur en + au tableau b à la fin 
+        // ajouter le chiffre 4 après la valeur 3 dans le tableau b 
+
+        b.push( 4 ) ; // ajoute le chiffre 4 à la fin du tableau b 
+        console.log(b)  // Array(4) [ 1, 2, 3, 4 ]
+
+        b.unshift("bonjour") ; // ajouter le texte "bonjour" au début du tableau
+        console.log(b); // Array(5) [ "bonjour", 1, 2, 3, 4 ]
+
+
+        // ajouter le texte "coucou" entre le chiffre 1 et 2 
+        // 
+        b.splice( 2 , 0 , "coucou")
+        // 2 position (index) où je veux insérer le valeur
+        // 0 le nombre d'élément que je veux supprimer 0 => aucun
+        // "coucou" le mot à ajouter
+        console.log(b); // Array(6) [ "bonjour", 1, "coucou", 2, 3, 4 ]
+
+        b.splice(2, 0 , []); // [] entre 1 et "coucou"
+        console.log(b); // Array(7) [ "bonjour", 1, [], "coucou", 2, 3, 4 ]
+
+        // [].push("")
+        // [].unshift('')
+        // [].splice(position, 0 , "")
+        // ajouter des valeurs dans un tableau existant
+
+        // supprimer
+        const c = ["bonjour" , "comment" , "allez" , "vous" , "?"] ;
+
+        c.pop(); // supprimer le dernier élément d'un tableau
+        console.log(c); // Array(4) [ "bonjour", "comment", "allez", "vous" ]
+
+        c.shift() ; // supprimer le 1er élément du tableau
+        console.log(c) ; // Array(3) [ "comment", "allez", "vous" ]
+
+        c.splice(1 , 1) ; // 1 position de "allez" , 1 nombre d'élément à supprimer
+        console.log(c) ; // Array [ "comment", "vous" ]
+
+        c.splice(0 , 1 , "how"); // supprime le comment => remplace par how
+        console.log(c); 
+
+
+        const fruits = ["pomme", "poire", "banane" , "abricot"]; // 
+        fruits.pop() // supprimer abricot
+        fruits.splice(1 , 1) // supprimer poire
+
+        console.log(fruits); 
+
+        const arbres = ["roseau", "chêne", "pommier" , "poirier"]
+
+        const aDeplacer = arbres.splice(1, 1)[0]
+        console.log(aDeplacer)
+        arbres.splice(2 , 0 , aDeplacer); 
+        console.log(arbres);
+
+        
+        const etudiant = "Alain"
+        const age = 20 ;
+        const etat = false  ;
+        
+        // age = 30 ; erreur de javascript
+        
+        const formation = ["js", "react"]; 
+        // stocker la référence mais pas les valeurs
+        const promotion = { produit : "PS4" , prix : 20  }
+
+        formation.push("angular") 
+        promotion.produit = "PS5"; 
+        // modifier les valeurs stockées dans les tableaux ou dans les objets
+
+        // formation = []; 
+
+        const formes = ["triangle" , "carre"]
+        Object.freeze(formes)
+
+        //formes.push("cercle");
+        // console.log(formes); 
+
+    </script>
+</body>
+</html>
