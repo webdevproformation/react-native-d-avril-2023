@@ -8,7 +8,54 @@
 </head>
 <body>
     <script>
-        // 02-desctructuration.html
+        // 02-destructuration.html
+
+        const etudiant = {
+            nom : "Alain",
+            age : 20 ,
+            adresse : {
+                rue : "75 rue de Paris",
+                ville : "Lille",
+                cp : 59000
+            }
+        }
+
+        console.log(etudiant.adresse.cp) ;  
+
+        // ES6 (depuis 2015) => nouvelle manière d'accéder aux propriétés d'un objet 
+        const { cp , ville , rue } = etudiant.adresse
+        console.log(cp, ville , rue); 
+
+        // etudiant.adresse.rue
+        // rue 
+
+        const etudiant2 = {
+            nom : "Céline", 
+            adresse : {
+                rue : "35 rue de Lille",
+                ville : "Paris"
+            }
+        }
+        const { ville : villeCeline } = etudiant2.adresse // desctructuration d'un objet et renommer la variable
+        console.log(villeCeline);
+        // villeCeline = 10;  
+
+        const {adresse} = etudiant2
+        console.log(adresse)
+        // https://perso-laris.univ-angers.fr/~delanoue/polytech/design_pattern/support/bates_design-patterns-tete-la-premiere.pdf
+
+        // manière classique 
+        function description(objet){
+            return `${objet.titre} ${objet.description}`
+        }
+
+        // manière destructurée des créer une fonctions 
+        function description({titre , description}){
+            return `${titre} ${description}`
+        }
+
+        // fonction fléchée avec destructuration 
+        const description = ({titre , description}) => `${titre} ${description}`
 
     </script>
 </body>
