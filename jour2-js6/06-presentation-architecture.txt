@@ -26,13 +26,23 @@ package.json
          => package créé lors de la création du projet npm init 
          => npx create-expo-app --template
 
-"name" :""
+"name" : ""
 "version" : ""
 "script" : { 
     android 
     web
- } 
+} 
 
 npm run android ==> expo start --android
 npm run web     ==> expo start --web
 
+------------
+
+lancer Android studio
+lancer Emulateur 
+retrécir Android studio + gestionnaire émulateur 
+
+cd jour1-decouverte
+npm run android
+
+cliquer dans le terminal => r 
