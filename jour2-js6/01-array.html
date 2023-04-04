@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a = [1,2,3];
+
+        // a est un tableau ET automatique js le transforme aussi en objet 
+        // support de cours => 
+        // https://formation.webdevpro.net/js-initiation
+        // login : js
+        // password : initiation
+
+        // ajouter
+        // push(1,2,3) droite
+        // unshift("&", "a") gauche
+        // splice(index , 0, "bonjour", [] , {} , true)
+
+        // supprimer
+        // pop() pas de paramètre
+        // shift() pas de paramètre
+        // splice(index , 1)
+
+        // modification
+        a[2] = 'autre valeur'
+        a.splice(2, 1, "autre valeur")
+
+        // .map() => boucle dans React => tableau => copie et il est modifié => concaténation 
+        const r = a.map(item => `<p>${item}</p>`) // [1,2,3]
+
+        // r === ["<p>1</p>","<p>2</p>","<p>3</p>"]
+
+        const b = a.reduce( function(total , item){ // Redux // useReducer (state management)
+            return total + item
+        } , 0)
+
+        const c =  a.filter(function(item){ // [1,2,3]
+            return item > 2
+        })
+        // c === [3]
+
+        const d = a.find(function(item){  // [1,2,30]
+            return item > 2
+        })
+        // d === 30
+
+        const e = a.find(function(item){  // [1,2,3]
+            return item > 20
+        })
+        // e === undefined
+
+
+
+    </script>
+</body>
+</html>

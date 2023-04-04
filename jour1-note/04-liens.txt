@@ -22,4 +22,5 @@ js => page web mais aussi dans react native
 
 => 
 
+je relance l'ordinateur => @ toute suite !!!
 
