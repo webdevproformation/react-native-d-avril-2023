@@ -83,12 +83,22 @@
 
         const toto = { prix : 10 , isAdmin : false }
 
-        const titi = { ...toto , prix : 30 , duree : 20}
+        const titi = { ...toto , prix : 30 , duree : 20 }
 
         console.log(titi)
         // { prix : 30 , duree : 20 , isAdmin : false }
 
+        // ... => changement de type de tableau 
+        // ... => shallow copy( copie en surface )  deepCopie 
+        // ... dans les paramètres 
     </script>
 </body>
 </html>
+<!-- 
+    créer le fichier 04-exo.html 
+    créer un tableau exo = ["texte" , "lorem" , "ipsum"]
 
+    copie (clone) le tableau exo dans le tableau copie 
+    dans le 1er tableau modifier la valeur de lorem => "test "
+    rechercher le texte "test" dans le tableau copie   => normalement il n'y a pas test dans copie 
+-->

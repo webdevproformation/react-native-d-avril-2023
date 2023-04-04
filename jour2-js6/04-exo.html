@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const exo = ["texte" , "lorem" , "ipsum"]
+        const copie = [...exo];
+
+        //exo[1] = "test";
+        //exo.splice(1, 1, "test");
+        exo.splice(exo.indexOf("lorem"), 1, "test");
+
+        const recherche = copie.find((item) => {
+            return item === "test"
+        })
+        console.log(recherche); // undefined
+    </script>
+    <script>
+        const exo = ["texte", "lorem", "ipsum"]
+        const copie = [...exo];
+        exo.splice(1,1,"test");
+        console.log(exo[1])
+        console.log(copie[1])
+    </script>
+    <script>
+        const exo = ["texte", "lorem", "ipsum"];
+        const copie = [ ...exo ];
+        exo.splice(exo.indexOf("lorem"), 1, "test");
+        console.log(copie.find(item => item === "test"));
+    </script>
+     <script>
+        const exo = ["texte", "lorem", "ipsum"];
+        const copie = [...exo];
+        exo.splice(1, 1, "test");
+        if (copie.find((item) => item === "test") === undefined) {
+          console.log("valeur non trouvée");
+        } else {
+          console.log("valeur trouvée");
+        }
+      </script>
+</body>
+</html>
