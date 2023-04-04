@@ -46,17 +46,20 @@
 
         // manière classique 
         function description(objet){
-            return `${objet.titre} ${objet.description}`
+            return `${objet.titre} ${objet.auteur}`
         }
 
         // manière destructurée des créer une fonctions 
-        function description({titre , description}){
-            return `${titre} ${description}`
+        function description({titre , auteur}){
+            return `${titre} ${auteur}`
         }
 
         // fonction fléchée avec destructuration 
-        const description = ({titre , description}) => `${titre} ${description}`
+        const description = ({titre , auteur}) => `${titre} ${auteur}`
 
+        // 10h56 => ... 
+        // import et export module ES6 de javascript 
     </script>
 </body>
 </html>
+<!-- 03-spread-operator.html -->
