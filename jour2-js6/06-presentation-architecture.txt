@@ -1,0 +1,38 @@
+3 dossiers 
+.git
+-----
+.expo => si utilise npm run web => fichiers de cache 
+-----
+assets => assets => images/ fichier pdf / data ...
+-----
+node_modules => contient PLEIN de code => toutes les librairies qui permettent à React Native / expo de fonctionner 
+npx create-expo-app --template
+dossier technique => il ne faut pas allez modifier du code là dedans 
+npm install => ajouter / modifier 
+npm uninstall => supprimer
+
+.gitignore => dire à git ce qu'il ne faut pas versionner 
+
+App.js => Composant Racine de votre application 
+le fichier qui est appelé en 1er => charger tous les composants 
+
+app.json => manifest => décrire votre projet (version web => PWA)
+PWA => Progressive Web App 
+
+babel ... => babel librairie => transpiler traduire version de javascript => version de javascript 
+          => JS ES6 en + JSX 
+package-lock.json  => où a été téléchargé quoi dans node_modules 
+package.json
+         => package créé lors de la création du projet npm init 
+         => npx create-expo-app --template
+
+"name" :""
+"version" : ""
+"script" : { 
+    android 
+    web
+ } 
+
+npm run android ==> expo start --android
+npm run web     ==> expo start --web
+
