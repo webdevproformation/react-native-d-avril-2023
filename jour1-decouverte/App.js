@@ -15,6 +15,7 @@ import { StyleSheet, Text, View } from 'react-native';
 // HMR => Hot Module Reload react et expo 
 
 import { Bonjour } from "./composants/Bonjour"
+import { Exo1 } from "./composants/Exo1"
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
       {/* commentaire en jsx  */}
       <Text>Formation Doranco 2023</Text>
       <Text>groupe CDA</Text>
+      <Exo1 />
       <StatusBar style="auto" />
     </View>
   );
