@@ -46,3 +46,5 @@ cd jour1-decouverte
 npm run android
 
 cliquer dans le terminal => r 
+
+=> App.js 
