@@ -16,11 +16,15 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import { Bonjour } from "./composants/Bonjour"
 import { Exo1 } from "./composants/Exo1"
+import { deuxieme as Toto } from "./composants/Deuxieme"
+import { Boucle } from './composants/Boucle';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Bonjour />
+      <Toto />
+      <Boucle />
       {/* Composant => un peu comme si on crée une balise  */}
       {/* function Bonjour(){} Bonjour() => <Bonjour /> */}
       {/* commentaire en jsx  */}
