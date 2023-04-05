@@ -7,3 +7,10 @@ Blank
 jour3-composants 
 cd jour3-composants
 npm run android
+r 
+
+extension => créer rapidement des composants
+=> extension visual studio code 
+// installer deux extensions 
+React Native Tools 
+ES7 => snippet 
