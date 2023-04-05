@@ -1,15 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View , ScrollView } from 'react-native';
 import Form from './composant/Form';
 import Exo1 from './composant/Exo1';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Form />
       <Exo1 />
       <StatusBar style="auto" />
-    </View>
+    </ScrollView>
   );
 }
 
