@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View, TextInput , Button } from 'react-native'
+import BouncyCheckbox from "react-native-bouncy-checkbox"
 import React from 'react'
 
 const Exo1 = () => {
@@ -8,10 +9,13 @@ const Exo1 = () => {
       <TextInput placeholder='votre email' style={styles.box} />
       <TextInput placeholder='votre sujet' style={styles.box} />
       <TextInput placeholder='description' numberOfLines={5} multiline={true} style={styles.box}/>
+      <BouncyCheckbox onPress={() => {}} text="accepter les conditions" style={{ marginBottom : 10 }} />
       <Button title="envoyer" onPress={() => {}} />
     </View>
   )
 }
+// https://github.com/WrathChaos/react-native-bouncy-checkbox
+// npm i react-native-bouncy-checkbox
 
 export default Exo1
 
