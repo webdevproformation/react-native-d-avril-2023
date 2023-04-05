@@ -6,3 +6,14 @@ Dans React Native => display:flex pour réaliser la mise en page
     l'autre
     <Text></Text>
 <View>
+
+
+https://reactnative.dev/
+
+<View>
+<Text>
+<StatusBar>
+
+https://reactnative.dev/docs/components-and-apis
+
+=> 
