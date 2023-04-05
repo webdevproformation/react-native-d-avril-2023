@@ -9,17 +9,26 @@ export default function App() {
         <Text>deuxieme</Text>
         <Text>troisieme</Text>
       </View>
-      <View style={{ backgroundColor : "blue" , flex : 2 , width:"100%" , justifyContent: "space-between" }} >
+      <View style={{ backgroundColor : "blue" , flex : 2 , width:"100%" , justifyContent: "space-between" , color : "white" }} >
         <View style={{ flexDirection : "row" , justifyContent: "space-between" }}>
           <Text style={{color : "white"}}>Premier</Text>
           <Text style={{color : "white"}}>Deuxieme</Text>
         </View>
         <View style={{ flexDirection : "row" , justifyContent: "space-between" }}>
-          <Text style={{color : "white"}}>Troisieme</Text>
+          <Text style={{ color : "white"}}>Troisieme</Text>
           <Text style={{color : "white"}}>Quatrieme</Text>
         </View>
+        {/**
+         <Text >premier</Text>
+        <Text style={{ position: "absolute", top: 5, right: 10 }}>deuxieme</Text>
+        <Text style={{ position: "absolute", bottom: 5 }}>troisieme</Text>
+        <Text style={{ position: "absolute", bottom: 5, right: 10 }}>quatrieme</Text>
+         */}
       </View>
-      <View style={{ backgroundColor : "yellow" , flex : 0.5 , width:"100%" }} />
+      <View style={{ backgroundColor : "yellow" , flex : 0.5 , width:"100%" , flexDirection : "row" , alignItems : "center" , justifyContent: "space-around" }} >
+         <Text style={[styles.color2 , styles.menu]}>Accueil</Text>
+         <Text style={[styles.color , styles.menu]}>Profil</Text>
+      </View>
       {/*<StatusBar hidden={true} />*/}
       <StatusBar style="auto" />
     </View>
@@ -32,6 +41,17 @@ const styles = StyleSheet.create({
     marginTop: 25, 
     backgroundColor: '#fff',
     // flexDirection: "column"
+  },
+  color : {
+    color : "red"
+  },
+  color2 : {
+    color : "blue"
+  },
+  menu : {
+    fontSize : 20 ,
+    borderBottomWidth : 1 ,
+    borderBottomColor : "red"
   },
   zone1 : {
     backgroundColor : "red" , 
