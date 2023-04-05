@@ -16,3 +16,11 @@ const Galerie = () => {
 export default Galerie
 
 const styles = StyleSheet.create({})
+
+/**
+Créer le composant Exo2 
+titre Exo 2
+contient 6 images de dimensions 110x110
+mettre 3 premières images l'une à côté de l'autre
+mettre les 3 suivantes l'une à côté de l'autre 
+ */

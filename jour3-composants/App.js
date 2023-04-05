@@ -3,10 +3,12 @@ import { StyleSheet, Text, View , ScrollView } from 'react-native';
 import Form from './composant/Form';
 import Exo1 from './composant/Exo1';
 import Galerie from './composant/Galerie';
+import Exo2 from './composant/Exo2';
 
 export default function App() {
   return (
     <ScrollView style={styles.container}>
+      <Exo2 />
       <Form />
       <Exo1 />
       <Galerie />
