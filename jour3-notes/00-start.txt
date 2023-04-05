@@ -76,3 +76,4 @@ nom projet => jour3-composants
 cd jour3-composants
 npm run android 
 
+rdv 13h30 bon appetit !!!!!!!!!!

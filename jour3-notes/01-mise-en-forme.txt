@@ -17,3 +17,10 @@ https://reactnative.dev/
 https://reactnative.dev/docs/components-and-apis
 
 => 
+
+<View>
+<Text>
+<StatusBar>
+
+
+=> https://reactnative.dev/docs/components-and-apis

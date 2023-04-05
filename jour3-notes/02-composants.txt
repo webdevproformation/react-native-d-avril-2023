@@ -1,0 +1,9 @@
+renommer le projet de ce matin jour3-composants => jour3-layout 
+
+créer un nouveau projet 
+cd ..
+npx create-expo-app --template 
+Blank 
+jour3-composants 
+cd jour3-composants
+npm run android
