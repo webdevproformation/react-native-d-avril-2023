@@ -4,7 +4,7 @@ export function Boucle (){
 
     const etudiants = [ 
         {nom : "Alain" , age : 20},
-        {nom : "Benoit" , age : 12},
+        {nom : "Zorro" , age : 12},
         {nom : "Céline" , age : 35}
     ]; 
 
@@ -15,6 +15,7 @@ export function Boucle (){
             {etudiants.map(function(item, index){
                 return <Text key={index}>{item.nom}</Text>
             })}
+            {[<Text key={1}>{etudiants[0].nom}</Text>, <Text>{etudiants[1].nom}</Text>]}
         </View>
     )
 }

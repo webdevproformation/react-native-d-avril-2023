@@ -31,6 +31,13 @@ export default function App() {
       <Text>Formation Doranco 2023</Text>
       <Text>groupe CDA</Text>
       <Exo1 />
+      <View>
+        {[<Text>tutu</Text>, <Text>toto</Text>]}
+      </View>
+      <View>
+        <Text>tutu</Text>
+        <Text>toto</Text>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
