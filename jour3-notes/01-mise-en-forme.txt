@@ -1,0 +1,8 @@
+mise en forme => comment disposer les éléments dans un écran 
+
+Dans React Native => display:flex pour réaliser la mise en page 
+
+<View> => display:flex par défaut l'un à côté de l'autre MAIS l'un en dessous de 
+    l'autre
+    <Text></Text>
+<View>

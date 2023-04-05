@@ -66,3 +66,13 @@ si il y a une mis à jour du DOM => virtual DOM (très rapide) puis mise à jour
   <Text>element1</Text> 
   <Text>elemnt2</Text>
 </View>
+
+=> stopper le serveur Ctrl + C
+=> cd ..
+=> npx create-expo-app --template
+1er choix 
+nom projet => jour3-composants 
+
+cd jour3-composants
+npm run android 
+
