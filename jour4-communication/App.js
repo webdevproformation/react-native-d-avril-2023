@@ -31,7 +31,6 @@ export default function App() {
                                 { id : 1 , nb : 0 },
                                 { id : 2  , nb : 0 }
                               ]); 
-
   const modifierLike = (id) => {
     // rechercher dans likes le compteur à modifier
     const cloneLikes = [...likes] // clone de l'état dans une variable  cloneLikes
