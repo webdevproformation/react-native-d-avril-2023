@@ -4,10 +4,12 @@ import Form from './composant/Form';
 import Exo1 from './composant/Exo1';
 import Galerie from './composant/Galerie';
 import Exo2 from './composant/Exo2';
+import Touchable from './composant/Touchable';
 
 export default function App() {
   return (
     <ScrollView style={styles.container}>
+      <Touchable />
       <Exo2 />
       <Form />
       <Exo1 />
