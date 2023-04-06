@@ -13,7 +13,7 @@ import {
         // stocker dans le dossier assets du projet jour3-composants
     } from 'react-native'
 import React from 'react'
-// import AndroidLogo from "../assets/android2.svg"
+import AndroidLogo from "../assets/android2.svg"
 
 const Touchable = () => {
   return (
@@ -31,10 +31,10 @@ const Touchable = () => {
             <Image source={{uri : "https://via.placeholder.com/50x50" , width:50 , height:50 }}/> 
         </TouchableNativeFeedback>
         <TouchableHighlight style={ styles.touchableOpacity } activeOpacity={0.6} underlayColor="#DDDDDD" onPress={() =>{}}>
-            <Image source={{uri : "https://via.placeholder.com/50x50" , width:50 , height:50 }}/> 
+            <AndroidLogo width={50} height={50} fill="#000" />
         </TouchableHighlight>
         <TouchableWithoutFeedback onPress={() => { console.warn("no feed back") }} style={ styles.touchableOpacity } >
-            <Image source={{uri : "https://via.placeholder.com/50x50" , width:50 , height:50 }}/>
+            <AndroidLogo width={100} height={100} fill="#009FBD" />
         </TouchableWithoutFeedback>
       </View>
     </View>
