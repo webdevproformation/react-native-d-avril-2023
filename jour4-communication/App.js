@@ -4,6 +4,8 @@ import Premier from './composants/Premier';
 import Diapositive from './composants/Diapositive';
 import Compteur from './composants/Compteur';
 import Like from './composants/Like';
+import { useState } from 'react';
+import LikeCompteur from './composants/LikeCompteur';
 
 export default function App() {
 
@@ -20,8 +22,25 @@ export default function App() {
     "https://source.unsplash.com/random/200x102"
   ];
 
+  /* const likes = [
+    { id : 1 , nb : 3 },
+    { id : 2  , nb : 10 }
+  ];  */
+
+  const [ likes , setLikes ] = useState([
+                                { id : 1 , nb : 3 },
+                                { id : 2  , nb : 10 }
+                              ]); 
+
+  const modifierLike = () => {
+    alert("bonjour"); 
+  }
+
   return (
     <View style={styles.container}>
+      {likes.map(function(item , index){
+        return <LikeCompteur key={index} compteur={item} augmenter={modifierLike} />
+      })}
       <Like />
       <Compteur />
       {/* exécute le composant Premier dans App en lui ajoutant des props
