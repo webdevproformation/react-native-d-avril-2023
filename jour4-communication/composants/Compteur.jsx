@@ -12,7 +12,8 @@ const Compteur = () => {
     // setNb () modifier la valeur du state => nb ET rerender / réexécuter le composant et effectuer update de l'interface graphique
   return (
     <View>
-      <Text>Compteur</Text>
+      <Text>Compteur </Text>
+      <Text style={{ fontSize : 40 , color : "red"}}>Coucou Jacques André !!</Text>
       <View style={{flexDirection:"row" , alignItems:"baseline"}}>
         <Text style={{ marginRight : 10 }} >{ nb }</Text>
         <Button title="+" onPress={() => { setNb( nb + 1 ) }}  />
@@ -21,6 +22,7 @@ const Compteur = () => {
   )
 }
 export default Compteur
+// expo publish
 
 const styles = StyleSheet.create({})
 // pour modifier une valeur affichée dans le composant 
@@ -30,3 +32,5 @@ const styles = StyleSheet.create({})
 // pour créer un local state => il faut utiliser une fonction spéciale de React => hook
 // use....
 // useState()  => fonction de React 
+
+// expo publish 
