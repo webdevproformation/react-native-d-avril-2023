@@ -6,3 +6,6 @@
 // ["https://source.unsplash.com/random/200x100" , "https://source.unsplash.com/random/200x101", "https://source.unsplash.com/random/200x102"]
 
 // dans la vue du composant App faire une boucle .map() sur chaque élément du tableau et envoyé l'url comme props du composant Diapositive
+
+
+=> bon appetit 13h40 !!
