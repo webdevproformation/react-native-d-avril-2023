@@ -12,3 +12,11 @@
 
 
 // ------------
+
+cas pratique :
+créer un nouveau composant qui s'appelle Like
+dans ce composant 
+image svg en forme de like => https://icons.getbootstrap.com/icons/hand-thumbs-up-fill/
+un chiffre à côté 
+
+si vous cliquez l'image en forme de pouce => augmenter le chiffre à côté du pouce de + 1 
