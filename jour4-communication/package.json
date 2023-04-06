@@ -6,7 +6,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "svg:install": "npm i react-native-svg react-native-svg-transformer && npx expo install react-native-svg@13.4.0 && npx expo customize metro.config.js"
   },
   "dependencies": {
     "expo": "~48.0.10",
