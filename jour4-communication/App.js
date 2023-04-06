@@ -28,12 +28,31 @@ export default function App() {
   ];  */
 
   const [ likes , setLikes ] = useState([
-                                { id : 1 , nb : 3 },
-                                { id : 2  , nb : 10 }
+                                { id : 1 , nb : 0 },
+                                { id : 2  , nb : 0 }
                               ]); 
 
-  const modifierLike = () => {
-    alert("bonjour"); 
+  const modifierLike = (id) => {
+    // rechercher dans likes le compteur à modifier
+    const cloneLikes = [...likes] // clone de l'état dans une variable  cloneLikes
+                                  // la variable cloneLikes contient les mêmes valeurs que likes MAIS dispose d'un référence mémoire différente
+                                  // c'est la variable que l'on va modifier  
+    const compteAModifier = cloneLikes.find(function(item){ return item.id === id})
+                                   // rechercher dans un tableau l'élement qui a l'id === 1
+                                   // { id : 1 , nb : 3 } === compteAModifier
+    const index =  cloneLikes.indexOf(compteAModifier)
+                                   // indexOf({ id : 1 , nb : 3 }) permet d'avoir la position 
+                                   // de cet élément dans le tableau 
+                                   //index === 0
+    cloneLikes[index].nb++ 
+                    // augmenter de + 1 la valeur de la propriété nb pour l'élement qui a pour position dans le tbleau 0 dans le tableau cloné
+    setLikes(cloneLikes); 
+                    // on passe au setter de like le clone => react va comparer likes initial et le cloneLikes => il fait la mise à jour juste pour l'élément modifié
+    // persistance => SQLITE (sur le smartphone)
+    // requête AJAX => API => stocker dans une base de données MongoDB le nombre de like 
+    // localStorage (Web) // navigateur web => cookie // session 
+    // site internet responsive design => chrome 
+    // app mobile => store => télécharger => installer (cgv)
   }
 
   return (
@@ -41,7 +60,9 @@ export default function App() {
       {likes.map(function(item , index){
         return <LikeCompteur key={index} compteur={item} augmenter={modifierLike} />
       })}
+
       <Like />
+      
       <Compteur />
       {/* exécute le composant Premier dans App en lui ajoutant des props
         en html => attribut 
