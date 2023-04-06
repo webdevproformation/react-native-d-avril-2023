@@ -5,7 +5,7 @@ attention les images .svg => images vectoriels ne sont compris par défaut par R
 
 => 1/ il faut ajouter deux packages dans le projet en cours 
 npm i react-native-svg react-native-svg-transformer
-
+npx expo install react-native-svg@13.4.0
 
 => 2/ créer une fichier metro.config.js à la racine du projet  
 npx expo customize metro.config.js
