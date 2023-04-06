@@ -24,3 +24,13 @@ si on fixe une hauteur au composant View => si la somme des hauteurs des éléme
 => téléchargé un composant pour les cases à coché <BusyCheckBox>  => <input type="radio" >
 => <Image /> => <img src="" alt="" >
 => <Button />
+
+----------------------------
+
+=> relancer le cas pratique d'hier => 
+
+cd jour3-composants
+lancer Android Studio => lancer Emulateur de Smartphone => lancer le smartphone virtuel
+npm run android 
+
+r => reload app 
