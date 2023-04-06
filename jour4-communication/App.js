@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import Premier from './composants/Premier';
 import Diapositive from './composants/Diapositive';
 import Compteur from './composants/Compteur';
+import Like from './composants/Like';
 
 export default function App() {
 
@@ -21,6 +22,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <Like />
       <Compteur />
       {/* exécute le composant Premier dans App en lui ajoutant des props
         en html => attribut 
