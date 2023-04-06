@@ -1,0 +1,26 @@
+support : 
+https://formation.webdevpro.net/react-native 
+login : react-native 
+password : facebook 
+
+-----------------
+
+notes de cours sur github :
+https://github.com/webdevproformation/react-native-d-avril-2023
+
+1 mise en page => Flexbox (version react native) par défaut flexDirection : "column"
+
+
+2 voir plusieurs composants :
+=> https://reactnative.dev/docs/components-and-apis
+
+=> View => <div>
+par défaut View => si il n'a pas de hauteur fixée via du "css react native"
+sa hauteur dépend de la hauteur de ses composants enfants
+si on fixe une hauteur au composant View => si la somme des hauteurs des éléments enfants >  une hauteur au composant View => les éléments hors de la hauteur vont être masqués
+=> <ScrollView> si le contenu de la View > à sa hauteur => barre de défilement verticale / horizontale => (barre de scroll)
+=> Text => <p> <h1> <h2> <li> ... 
+=> <TextInput /> => <input type="text"> <textarea>
+=> téléchargé un composant pour les cases à coché <BusyCheckBox>  => <input type="radio" >
+=> <Image /> => <img src="" alt="" >
+=> <Button />
