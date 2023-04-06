@@ -1,0 +1,6 @@
+stopper le projet actuel 
+
+=> cd ..
+=> npx create-expo-app jour4-communication
+=> cd jour4-communication 
+=> npm run android
