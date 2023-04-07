@@ -1,5 +1,7 @@
 import { StyleSheet, Text, View , TextInput , Button } from 'react-native'
 import React , {useState , useEffect} from 'react'
+import { FlatList } from 'react-native';
+import { ScrollView } from 'react-native';
 
 const Cocktails = () => {
   const [recherche , setRecherche] = useState("")
@@ -35,7 +37,24 @@ const Cocktails = () => {
             <Button title="rechercher" onPress={() => { console.log(recherche) }} />
         </View>
         <View style={styles.resultat}>
-            <Text>utiliser le formulaire ci dessus pour avoir une liste de cocktails</Text>
+            { resultats.length === 0 
+                ?   
+                <Text>utiliser le formulaire ci dessus pour avoir une liste de cocktails</Text>
+                : 
+                    <FlatList 
+                        data={resultats}
+                        renderItem={ (item) => <Text>{JSON.stringify(item)}</Text>}
+                        keyExtractor={item => item.idDrink}
+                    />
+                   
+            }
+             {/** au lieu de  <Text>{JSON.stringify(item)}</Text>
+              * Image coktails strDrinkThumb
+              * Text nom cocktail strDrink
+              * Text description strInstructions
+              * 
+              * 
+              */}
         </View>
     </View>
   )
