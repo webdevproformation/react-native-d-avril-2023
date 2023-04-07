@@ -1,7 +1,6 @@
-import { StyleSheet, Text, View , TextInput , Button } from 'react-native'
+import { StyleSheet, Text, View , TextInput , Button , Image } from 'react-native'
 import React , {useState , useEffect} from 'react'
 import { FlatList } from 'react-native';
-import { ScrollView } from 'react-native';
 
 const Cocktails = () => {
   const [recherche , setRecherche] = useState("")
@@ -41,19 +40,20 @@ const Cocktails = () => {
                 ?   
                 <Text>utiliser le formulaire ci dessus pour avoir une liste de cocktails</Text>
                 : 
-                    <FlatList 
-                        data={resultats}
-                        renderItem={ (item) => <Text>{JSON.stringify(item)}</Text>}
-                        keyExtractor={item => item.idDrink}
-                    />
-                   
+                <FlatList 
+                    data={resultats}
+                    renderItem={ ({item}) => <View style={styles.espace}>
+                        <Image source={{ uri : item.strDrinkThumb , width: "100%", height : 300 }}/>
+                        <Text style={styles.titre}>{ item.strDrink }</Text>
+                        <Text>{ item.strInstructions } </Text>
+                    </View>}
+                    keyExtractor={item => item.idDrink}
+                />
             }
              {/** au lieu de  <Text>{JSON.stringify(item)}</Text>
               * Image coktails strDrinkThumb
               * Text nom cocktail strDrink
               * Text description strInstructions
-              * 
-              * 
               */}
         </View>
     </View>
@@ -66,5 +66,7 @@ const styles = StyleSheet.create({
     box: { paddingHorizontal : 10},
     search : { flexDirection: "row" },
     input:{ padding : 5,  borderColor : "black", borderWidth : 1 , marginRight :10,   flex:1},
-    resultat : {  marginTop : 10 }
+    resultat : {  marginTop : 10 },
+    espace : {marginBottom : 30},
+    titre : { fontSize : 20 }
 })
