@@ -19,19 +19,22 @@ export default function App() {
       {/*<ScrollView>
         <Text>{texteLong()}</Text>
       </ScrollView> */}
-      <Mounted /> 
-      <Updated />
-      <View style={{ marginTop : 20 }}>
-        <Button onPress={() => {setShow(!show)}} title='show/hide'  />
-        { show ? <Unmounted /> : "" }
-        {/* show && <Unmounted />  */}
-      </View>
+      { false && <>
+        <Mounted /> 
+        <Updated />
+        <View style={{ marginTop : 20 }}>
+          <Button onPress={() => {setShow(!show)}} title='show/hide'  />
+          { show ? <Unmounted /> : "" }
+          {/* show && <Unmounted />  */}
+        </View>
+      </> }
+     
       {/* composant dans lequel on a 
         <TextInput> saisir cocktail
         <Button> 
         <View> => update de la liste 
          <Liste >
-
+      // rdv 13h30 bon appétit 
        => cliquer récupérer le texte saisi input et lancer une requête ajax   */ }
       <StatusBar style="auto" />
     </View>
