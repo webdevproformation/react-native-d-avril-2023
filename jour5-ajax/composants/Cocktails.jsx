@@ -3,14 +3,20 @@ import React , {useState , useEffect} from 'react'
 
 const Cocktails = () => {
   const [recherche , setRecherche] = useState("")
+  const [resultats , setResultats] = useState([]);
 
-  
+    // exécutés lors du lancement de l'app
     useEffect( function(){
         setRecherche("mojito")
     }, [])
 
     useEffect(function(){
         fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=mojito")
+        // requete AJAX = GET
+        .then(reponse => reponse.json())
+        // réponse de la requête ajax { status = 200 , headerReponse : {} , data : "{}" }
+        .then(data => setResultats(data.drinks)); 
+        // data les valeurs attendues au format javascript collection 
     } , [])
    
 
