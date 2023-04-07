@@ -4,6 +4,7 @@ import Mounted from './composants/Mounted';
 import Updated from './composants/Updated';
 import { useState } from "react"
 import Unmounted from './composants/Unmounted';
+import Cocktails from './composants/Cocktails';
 export default function App() {
 
  /*  function texteLong(){
@@ -16,6 +17,7 @@ export default function App() {
   const [show, setShow] = useState(true);
   return (
     <View style={styles.container}>
+      <Cocktails />
       {/*<ScrollView>
         <Text>{texteLong()}</Text>
       </ScrollView> */}
