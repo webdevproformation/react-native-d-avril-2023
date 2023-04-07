@@ -17,7 +17,7 @@ export default function App() {
   const [show, setShow] = useState(true);
   return (
     <View style={styles.container}>
-      <Cocktails />
+      { false && <Cocktails /> }
       {/*<ScrollView>
         <Text>{texteLong()}</Text>
       </ScrollView> */}

@@ -1,0 +1,16 @@
+créer un nouveau composant Pays 
+
+TextInput et button 
+
+liste 
+
+par défaut lorsque vous lancez l'application => 
+afficher tous les pays de la liste suivante:  https://restcountries.com/v3.1/all
+nom pays 
+drapeau 
+population 
+devise avec le symbole 
+
+si vous modifier la valeur du text dans TextInput => filtrer sur le pays concernée 
+
+https://restcountries.com/v3.1/name/{nom du pays dans l'input text}
