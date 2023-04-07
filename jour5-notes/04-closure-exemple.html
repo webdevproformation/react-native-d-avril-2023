@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn1">btn 1</button>
+    <button class="btn2">btn 2</button>
+    <p></p>
+    <script>
+        /* let i = 0 ;
+        document.querySelector(".btn1").addEventListener("click", function(){
+            setInterval( function(){
+                document.querySelector("p").innerHTML = i
+                i++
+            } , 1000)
+        })
+
+        document.querySelector(".btn2").addEventListener("click", function(){
+            i = 30 ; 
+        }) */
+
+        // technique de protection de données => en js tout est public 
+        // technique pour rendre une variable privée 
+        document.querySelector(".btn1").addEventListener("click", function(){
+            let i = 0 ;
+            setInterval( function(){
+                return (function(){
+                    document.querySelector("p").innerHTML = i
+                    i++
+                })()
+            } , 1000)
+        })
+
+        document.querySelector(".btn2").addEventListener("click", function(){
+            i = 30 ; 
+        })
+
+    </script>
+</body>
+</html>
