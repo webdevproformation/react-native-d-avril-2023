@@ -26,10 +26,8 @@ const Cocktails = () => {
         .then(reponse => reponse.json())
         // réponse de la requête ajax { status = 200 , headerReponse : {} , data : "{}" }
         .then(data => {
-            if(data.drinks.length > 0){
+            if(Array.isArray(data.drinks)){
                 setResultats(data.drinks)
-            }else{
-                setResultats([])
             }
         }); 
         // data les valeurs attendues au format javascript collection 
