@@ -1,7 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import { ScrollView } from 'react-native';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { StyleSheet, View , Button} from 'react-native';
+import Mounted from './composants/Mounted';
+import Updated from './composants/Updated';
+import { useState } from "react"
+import Unmounted from './composants/Unmounted';
 export default function App() {
 
  /*  function texteLong(){
@@ -11,12 +13,18 @@ export default function App() {
     }
     return texte
   } */
-
+  const [show, setShow] = useState(true);
   return (
     <View style={styles.container}>
       {/*<ScrollView>
         <Text>{texteLong()}</Text>
       </ScrollView> */}
+      <Mounted />
+      <Updated />
+      <View style={{ marginTop : 20 }}>
+        <Button onPress={() => {setShow(!show)}} title='show/hide'  />
+        { show && <Unmounted /> }
+      </View>
       <StatusBar style="auto" />
     </View>
   );
