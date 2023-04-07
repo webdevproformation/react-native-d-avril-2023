@@ -1,0 +1,3 @@
+<SafeAreaView> => une zone qui n'est pas cachée par un autre élément de l'écran (barre de status)
+fonctionne uniquement sur IOS 
+
