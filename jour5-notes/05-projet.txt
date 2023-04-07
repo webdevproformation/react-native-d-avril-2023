@@ -29,3 +29,15 @@ lorsque vous cliquez sur le bouton afficher dans la console le texte écrit dans
 => https://reactnative.dev/docs/textinput 
 => 2 props à connaitre => value={} => le texte affiché dans le champ (visuellement)
                        => onChangeText={(texte) => { console.log(texte)} }
+
+lorsque l'on lancer l'api 
+dans la zone de résultat 
+[
+    mojito x 6 => mounted 
+]
+=> https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
+
+
+=> lorsque l'on va changer la valeur de la recherche  => update 
+
+=> https://www.thecocktaildb.com/api/json/v1/1/search.php?s=mojito

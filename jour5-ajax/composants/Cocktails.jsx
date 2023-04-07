@@ -1,11 +1,31 @@
 import { StyleSheet, Text, View , TextInput , Button } from 'react-native'
-import React , {useState} from 'react'
+import React , {useState , useEffect} from 'react'
+
 const Cocktails = () => {
   const [recherche , setRecherche] = useState("")
+
+  
+    useEffect( function(){
+        setRecherche("mojito")
+    }, [])
+
+    useEffect(function(){
+        fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=mojito")
+    } , [])
+   
+
+  // hook useState() useEffect() => OBLIGATOIREMENT DANS LE COMPOSANT
+  // ils ne doivent pas être utilisés dans la vue 
+
   return (
     <View style={styles.box}>
         <View style={ styles.search }>
-            <TextInput placeholder='rechercher' onChangeText={(nomCocktail) => {setRecherche(nomCocktail)}} style={styles.input} />
+            <TextInput 
+                placeholder='rechercher' 
+                value={recherche}
+                onChangeText={(nomCocktail) => {setRecherche(nomCocktail)}} 
+                style={styles.input} 
+                keyboardType="default"/>
             <Button title="rechercher" onPress={() => { console.log(recherche) }} />
         </View>
         <View style={styles.resultat}>

@@ -1,3 +1,15 @@
 <SafeAreaView> => une zone qui n'est pas cachée par un autre élément de l'écran (barre de status)
 fonctionne uniquement sur IOS 
 
+ keyboardType props du composant <TextInput >
+
+ => https://lefkowitz.me/visual-guide-to-react-native-textinput-keyboardtype-options/
+
+
+  <SafeAreaView>
+      <TextInput 
+      style={styles.input} 
+      onChangeText={onChangeText}
+      value={text}  />
+        <Button />
+    </SafeAreaView>
