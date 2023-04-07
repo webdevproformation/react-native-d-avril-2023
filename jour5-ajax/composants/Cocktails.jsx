@@ -19,6 +19,21 @@ const Cocktails = () => {
         .then(data => setResultats(data.drinks)); 
         // data les valeurs attendues au format javascript collection 
     } , [])
+
+    useEffect(function(){
+        fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s="+ recherche)
+        // requete AJAX = GET
+        .then(reponse => reponse.json())
+        // réponse de la requête ajax { status = 200 , headerReponse : {} , data : "{}" }
+        .then(data => {
+            if(data.drinks.length > 0){
+                setResultats(data.drinks)
+            }else{
+                setResultats([])
+            }
+        }); 
+        // data les valeurs attendues au format javascript collection 
+    } , [recherche])
    
 
   // hook useState() useEffect() => OBLIGATOIREMENT DANS LE COMPOSANT
