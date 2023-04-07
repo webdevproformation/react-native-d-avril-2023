@@ -13,7 +13,7 @@ const Compteur = () => {
   return (
     <View>
       <Text>Compteur </Text>
-      <Text style={{ fontSize : 40 , color : "red"}}>Coucou Jacques André !!</Text>
+     
       <View style={{flexDirection:"row" , alignItems:"baseline"}}>
         <Text style={{ marginRight : 10 }} >{ nb }</Text>
         <Button title="+" onPress={() => { setNb( nb + 1 ) }}  />
