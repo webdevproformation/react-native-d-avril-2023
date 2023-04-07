@@ -1,0 +1,59 @@
+
+import { useState , useEffect } from "react"
+
+const C = () => {
+    const [nb , setNb] = useState(0) // useState 
+
+    // useEffect => side Effect => Effet Secondaire 
+    // hook (fonction de react ) va s'exécuter à certain moment dans le cycle de vie du composant 
+
+    // 3 étapes dans son cycle de vie du composant 
+    
+    // mounted  => s'afficher à l'écran
+
+    // updated => lorsque une valeur de son state est modifiée /ou lorsqu'une props est modifiée
+
+    // unmounted => lorsque l'on composant est supprimé de l'écran 
+
+
+    // useEffect va permettre d'exécuter des traitements à lorsque le composant est mounted
+
+    // useEffect va permettre d'exécuter des traitements à lorsque une valeur du state est modifiée 
+
+    useEffect( function(){} , []  )
+    // 1er paramètre un callback qui contient les traitements à affectuer 
+    // 2ème paramètre un tableau [] => tableau des dépendances de useEffect 
+
+    useEffect( function(){ // traitement sur le mounted 
+        // traitement ici 
+    },  []); // si je mets un tableau vide comme 2ème paramètre du useEffect 
+
+    // les traitements ne doivent être exécutées QUE lorsque le composant est monté 1 seule fois 
+
+
+    useEffect( function(){
+
+    } , [ nb , total , etudiant ] ) // le useEffect s'exécute à chaque que nb est modifié => exécuter un traitement lorsque on a un mise à jour 
+
+    useEffect( function(){
+        return () => {
+            // traitement ici exécuté lorsque l'on composant est supprimé de l'écran
+        }
+    } , [ ])
+
+----------------------
+
+    mounted 
+    useEffect( function(){}, [])
+
+    update 
+    useEffect( function(){}, [props, statelocal ])
+
+    unmounted 
+    useEffect( function(){
+        // closure 
+        return () => {
+            // ici exécuté lorsque l'on a supprimer le composant de l'écran 
+        }
+    } , [])
+}

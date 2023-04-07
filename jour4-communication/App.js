@@ -72,7 +72,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <ScrollView>
 
+      
         <Composant />
 
       {likes.map(function(item , index){
@@ -114,6 +116,7 @@ export default function App() {
           return <Diapositive url={diapo} key={index} / >
         })}
       </View>
+      </ScrollView>
       <StatusBar style="auto" />
     </View>
   );
@@ -127,3 +130,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+// rdv 10h50 @ toute suite !
