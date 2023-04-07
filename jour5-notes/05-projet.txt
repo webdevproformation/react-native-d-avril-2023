@@ -1,0 +1,5 @@
+cd ..
+npx create-expo-app --template 
+jour5-ajax
+cd jour5-ajax
+npm run android
