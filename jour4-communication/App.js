@@ -1,11 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View ,ScrollView} from 'react-native';
 import Premier from './composants/Premier';
 import Diapositive from './composants/Diapositive';
 import Compteur from './composants/Compteur';
 import Like from './composants/Like';
 import { useState } from 'react';
 import LikeCompteur from './composants/LikeCompteur';
+import Composant from './composants/Composant';
 
 export default function App() {
 
@@ -56,6 +57,12 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      
+
+        <Composant />
+
+
+
       {likes.map(function(item , index){
         return <LikeCompteur key={index} compteur={item} augmenter={modifierLike} />
       })}
