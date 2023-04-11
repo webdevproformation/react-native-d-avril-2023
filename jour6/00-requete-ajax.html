@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const url = `https://restcountries.com/v3.1/name/france`;
+        // au lieu d'avoir une réponse en html 
+        // tableau au format json => valeur 
+
+        // récupérer la valeur ET de l'afficher et de mettre ce tableau en forme 
+
+        //  fonction native de js => const function var let ++ 
+        fetch(url)
+        // fetch() retourne une Promise contenant une Reponse {} ayant une méthode json()
+            .then( reponse => { 
+                //console.log(reponse)
+                return reponse.json()} )
+        //  reponse.json() retourne une Promise avec les données vues à l'écran
+            .then( data => console.log(data) )
+
+
+        // quand TOUT va bien 
+
+
+        const url2 = `https://restcountries.com/v3.1/name/blabla`;
+
+        fetch(url2)
+            .then( reponse => {
+                //console.log(reponse)
+                if(reponse.status === 200) return reponse.json()
+                throw new Error ("une erreur s'est produit "+ reponse.status)
+            } )
+            .then( data => console.log(data) ) // { status: 404, message: "Not Found" }
+            .catch(ex => console.log(ex))
+
+
+        const url3 = `https://restcountries.com/v99999/name/blabla`;
+
+        fetch(url3)
+        .then( reponse => {
+            if(reponse.status === 200) return reponse.json()
+                throw new Error ("une erreur s'est produit "+ reponse.status)
+        } )
+        .then(data => console.log(data))
+        .catch(ex => console.log(ex))
+
+
+        // https://rxjs.dev/
+    </script>
+
+</body>
+</html>

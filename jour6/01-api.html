@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // tout dépend de l'API 
+
+        const urlPays = `https://restcountries.com/v3.1/name/france`;
+
+        fetch(urlPays)
+            .then(reponse => reponse.json())
+            .then(data => console.log(data)) // [{...}] // {erreur : 404 , message : Not Found}
+
+
+        const urlCocktail = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=blabla"
+
+        fetch(urlCocktail)
+            .then(reponse => reponse.json())
+            .then(data => console.log(data)) // { drinks: (6) null }
+
+
+        const urlLorem = "https://jsonplaceholder.typicode.com/tutu"
+
+        fetch(urlLorem)
+            .then(reponse => reponse.json())
+            .then(data => console.log(data)) // [{},{},{},{}]  => si c'est faux {}
+        
+        // en fonction de l'API appelée => réponse correcte et la réponse d'erreur est variable 
+
+
+        const urlCocktailV = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=vodka"
+
+        fetch(urlCocktailV)
+            .then(reponse => reponse.json())
+            .then(data => console.log(data.drinks)) // { drinks: (6) : [] }
+            
+        
+        const urlCocktailV2 = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=vodka"
+
+        fetch(urlCocktailV2) 
+            .then(reponse => reponse.json())
+            // utilisation de la destructuration 
+            .then(({drinks}) => console.log(drinks)) // { drinks: (6) : [] }
+            
+        const urlPays2 = `https://restcountries.com/v3.1/name/france`;
+
+        fetch(urlPays2)
+            .then(reponse => reponse.json())
+            .then(data => console.log(data[0])) // {}
+            
+        
+        const urlPays3 = `https://restcountries.com/v3.1/name/france`;
+
+        fetch(urlPays3)
+            .then(reponse => reponse.json())
+            // utilisation de la destructuration 
+            .then(([france]) => console.log(france)) // {}
+
+        </script>
+
+        </script>
+
+        
+</body>
+</html>

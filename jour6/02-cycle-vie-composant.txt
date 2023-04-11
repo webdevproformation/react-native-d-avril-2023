@@ -1,0 +1,28 @@
+function Composant (){
+    const [nb , setNb] = useState(0) => ces deux fonctions permettent de réexécuter le composant => le réafficher => render 
+    // si exécute setNb => render de l'affichage du composant 
+    const [drinks, setDrinks] = useState([])
+    useEffect(function(){
+        // traitement 
+        // requete ajax 
+        fetch()
+            .then()
+            .then(cocktails => setDrinks(cocktails) )
+    }, [nb])
+
+    return <View>
+        <Text>Bonjour</Text>
+        <Button onPress={() => setNb(10)} title="test" />
+    </View>
+}
+
+=> exécuté dans le composant App 
+
+function App(){
+    return <View>
+        <Composant /> {/* exécuter le composant Composant => Afficher dans un écran (le render ) */}
+    </View>
+}
+
+// si utilise des fonctions spéciales de React => Hook 
+=> useState ou useEffect
