@@ -12,7 +12,7 @@ const Profil = ({navigation}) => {
       <TouchableWithoutFeedback onPress={() => alert("coucou")}>
         <MaterialCommunityIcons size={50} color="red" name="account"/>
       </TouchableWithoutFeedback>
-      <Button onPress={() => { navigation.navigate("modifier-login") }} title="modifier mot de passe" />
+      <Button onPress={() => { navigation.navigate("modifPass") }} title="modifier mot de passe" />
     </View>
   )
 }

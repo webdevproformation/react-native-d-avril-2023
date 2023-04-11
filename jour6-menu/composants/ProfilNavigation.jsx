@@ -4,12 +4,11 @@ import ModifPass from "./ModifPass";
 
 const Stack = createNativeStackNavigator();
 
-
 const ProfilNavigation = () => {
   return (
     <Stack.Navigator>
         <Stack.Screen component={Profil} name="profil" />
-        <Stack.Screen component={ModifPass} name="modifier-login" />
+        <Stack.Screen component={ModifPass} name="modifPass" />
     </Stack.Navigator>
   )
 }

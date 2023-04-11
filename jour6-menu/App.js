@@ -6,9 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Accueil from "./composants/Accueil"
 import ProfilNavigation from "./composants/ProfilNavigation"
-
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-
 const Menu = createBottomTabNavigator()
 // rdv 13h40 
 export default function App() {
