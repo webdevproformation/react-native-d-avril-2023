@@ -1,0 +1,12 @@
+Cas pratique :
+
+ajouter un nouveau lien dans la barre de menu en bas de l'écran 
+
+connexion => logo en forme de cadenas => https://pictogrammers.com/library/mdi/icon/lock-open/
+
+lorsque vous cliquer sur le lien en bas d'écran vous arrivez sur un formulaire ou on vous demande de saisir login et un password 
+
+si vous n'avez pas de compte, pour l'instant, un bouton est situé en dessous du formulaire pour créer un compte utilisateur 
+
+lorsque vous cliquez sur le bouton un stack apparaitre dans laquelle vous pouvez saisir un email 
+
