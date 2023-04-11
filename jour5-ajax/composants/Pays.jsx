@@ -37,8 +37,8 @@ const Pays = () => {
                 <Text style={styles.titre}>{item.flag}</Text>
             </View>
             <Text>population : {item.population}</Text>
-            <Text>devises : {item.currencies && Object.keys(item.currencies).map(function(devise , index){
-                return <Text key={index}>{JSON.stringify(item.currencies)}</Text>
+            <Text>devises : {item.currencies && Object.values(item.currencies).map(function(devise , index){
+                return <Text key={index}>{"\n"}{devise.name} - {devise.symbol}</Text>
             })}</Text>
         </View>} />
     }

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const devise = {
+            euro : { symbol : "€" },
+            dollar : {symbol : "$"}
+        }
+
+        console.log(Object.keys(devise)); // ["euro", "dollar"]
+
+        console.log(Object.values(devise)) // [ { symbol : "€" } , {symbol : "$"} ]
+
+        console.log(Object.entries(devise)) // [[ "euro", { symbol : "€" } ] , ["dollar" ,  {symbol : "$"}]]
+        
+    </script>
+</body>
+</html>
