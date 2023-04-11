@@ -50,3 +50,8 @@ npx expo install react-native-pager-view@6.1.2 react-native-safe-area-context@4.
 
 
 => npm run android  
+
+=> Avant de se lancer dans la barre de menu en bas de l'écran 
+=> créer deux composants 
+=> Accueil 
+=> Profil 
