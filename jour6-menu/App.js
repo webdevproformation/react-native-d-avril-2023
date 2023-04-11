@@ -7,6 +7,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Accueil from "./composants/Accueil"
 import ProfilNavigation from "./composants/ProfilNavigation"
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import ConnexionNavigation from './composants/ConnexionNavigation';
 const Menu = createBottomTabNavigator()
 // rdv 13h40 
 export default function App() {
@@ -38,6 +39,11 @@ export default function App() {
         <Menu.Screen name="profil" component={ ProfilNavigation } options={{
           tabBarIcon : function(){
             return <MaterialCommunityIcons name="anchor" color="black" size={40} />
+          }
+        }}/>
+         <Menu.Screen name="connexion-menu" component={ ConnexionNavigation } options={{
+          tabBarIcon : function(){
+            return <MaterialCommunityIcons name="lock-open" color="black" size={40} />
           }
         }}/>
          
