@@ -1,0 +1,50 @@
+par défaut dans Ract native, il n'y a pas de composant Menu 
+
+
+=> html vous avez une balise <a href=""></a> qui permet de créer une barre de menu en la combinant avec une liste 
+<ul>
+    <li><a href="">Accueil</a></li>
+    <li><a href="">Présentation</a></li>
+    <li><a href="">login</a></li>
+</ul>
+
+=> sur React native => il n'existe pas par défaut défaut de barre de menu dans les applications 
+
+=> c'est un composant que l'on va ajouter => via un téléchargement 
+
+=> si internet dédié pour ajouter des menus dans React native 
+=> https://reactnavigation.org/
+=> https://reactnative.dev/docs/navigation
+
+=>  il existe 3 manières naviger (principale)
+
+=> Stack navigation => un composant qui se pose l'un sur l'autre 
+
+=> bottom-tabs => onglet en bas d'écran => une barre de menu en bas de l'écran 
+=> cliquer sur les liens => passer d'un composant à l'autre 
+=> en maintenant la pression sur l'écran et déplacer le doigt vers la droite translater les écrans 
+
+=> drawer barre latérale => que l'on va pouvoir faire apparaitre soit via un bouton ou doigt sur le côté et vous pouvez tirer => barre latérale qui contient la liste des liens 
+
+=> barre de menu en bas 
+=> trouve ses billets facilements (cohérent)
+=> en fonction du type d'application que tu vas réaliser =>  bottom-tabs
+
+-----------------
+
+   Bouton => changer password => Stack
+
+Accueil / profil / connexion / SAV / Mention légale ....
+
+=> stopper le projet en cours 
+=> cd .. 
+=> npx create-expo-app --template 
+=> Blank 
+=> jour6-menu 
+
+=> avant de lancer notre application sur notre emulateur
+=> cd jour6-menu 
+npm install @react-navigation/native @react-navigation/native-stack @react-navigation/bottom-tabs react-native-vector-icons react-native-pager-view @react-navigation/material-top-tabs react-native-tab-view react-native-screens react-native-safe-area-context
+
+
+=> npm run android  
