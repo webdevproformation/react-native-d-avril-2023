@@ -5,7 +5,7 @@ import { NavigationContainer } from "@react-navigation/native"
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Accueil from "./composants/Accueil"
-import Profil from "./composants/Profil"
+import ProfilNavigation from "./composants/ProfilNavigation"
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -37,12 +37,14 @@ export default function App() {
            * https://www.npmjs.com/package/react-native-vector-icons
            * https://pictogrammers.com/library/mdi/
            */}
-        <Menu.Screen name="profil" component={Profil} options={{
+        <Menu.Screen name="profil" component={ ProfilNavigation } options={{
           tabBarIcon : function(){
             return <MaterialCommunityIcons name="anchor" color="black" size={40} />
           }
         }}/>
+         
        </Menu.Navigator>
+
       </NavigationContainer>
       <StatusBar style="auto" />
     </View>

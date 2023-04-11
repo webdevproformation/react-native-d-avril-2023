@@ -2,7 +2,9 @@ import { StyleSheet, Text, View , TouchableWithoutFeedback , Button } from 'reac
 import React from 'react'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const Profil = () => {
+import { createNativeStackNavigator } from "@react-navigation/native-stack"
+
+const Profil = ({navigation}) => {
   return (
     <View style={styles.box}>
       <Text  style={styles.titre}>Profil</Text>
@@ -10,7 +12,7 @@ const Profil = () => {
       <TouchableWithoutFeedback onPress={() => alert("coucou")}>
         <MaterialCommunityIcons size={50} color="red" name="account"/>
       </TouchableWithoutFeedback>
-      <Button onPress={() => {}} title="modifier mot de passe" />
+      <Button onPress={() => { navigation.navigate("modifier-login") }} title="modifier mot de passe" />
     </View>
   )
 }
