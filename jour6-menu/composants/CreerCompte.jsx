@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View , Button , TextInput } from 'react-native'
 import React from 'react'
 
-const CreerCompte = ({navigation}) => {
+const CreerCompte = ({navigation , route}) => {
   return (
     <View>
       <Text>CreerCompte</Text>
-      <TextInput placeholder='password' style={styles.input}/>
+      <Text>{ JSON.stringify(route.params.query) } </Text>
+      <TextInput placeholder='email' style={styles.input} value={route.params.query}/>
       <Button onPress={ () => navigation.goBack() } color="pink" title="annuler" />
     </View>
   )

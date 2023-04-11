@@ -44,7 +44,8 @@ export default function App() {
          <Menu.Screen name="connexion-menu" component={ ConnexionNavigation } options={{
           tabBarIcon : function(){
             return <MaterialCommunityIcons name="lock-open" color="black" size={40} />
-          }
+          },
+          title : "gestion de votre profil"
          
         }}/>
          
