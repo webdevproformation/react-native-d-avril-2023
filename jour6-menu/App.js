@@ -15,10 +15,16 @@ export default function App() {
   return (
     <View style={styles.container}>
       <NavigationContainer>
-      <Menu.Navigator>
-        <Menu.Screen name="home" component={Accueil}/>
+      <Menu.Navigator screenOptions={{
+        tabBarActiveBackgroundColor : "#eee",
+        tabBarStyle : { borderColor : "red" , borderWidth : 3 },
+        tabBarShowLabel : false, 
+        title : "bonjour"
+
+      }}>
+        {/** https://reactnavigation.org/docs/bottom-tab-navigator */}
+        <Menu.Screen name="home" component={Accueil} />
         <Menu.Screen name="profil" component={Profil}/>
-        <Menu.Screen name="connexion" component={Profil}/>
        </Menu.Navigator>
       </NavigationContainer>
       <StatusBar style="auto" />
