@@ -1,11 +1,12 @@
-import { StyleSheet, Text, View , TextInput } from 'react-native'
+import { StyleSheet, Text, View , TextInput , Button } from 'react-native'
 import React from 'react'
 
-const ModifPass = () => {
+const ModifPass = ({navigation}) => {
   return (
     <View style={styles.box}>
       <Text>ModifPass</Text>
       <TextInput placeholder='changer password' />
+      <Button onPress={() => navigation.goBack()}  title='retour en arriere' color="purple"/>
     </View>
   )
 }
