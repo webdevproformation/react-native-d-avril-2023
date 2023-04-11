@@ -1,0 +1,9 @@
+support : 
+https://formation.webdevpro.net/react-native 
+login : react-native 
+password : facebook 
+
+-----------------
+
+notes de cours sur github :
+https://github.com/webdevproformation/react-native-d-avril-2023

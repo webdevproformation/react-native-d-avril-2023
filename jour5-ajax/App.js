@@ -5,6 +5,7 @@ import Updated from './composants/Updated';
 import { useState } from "react"
 import Unmounted from './composants/Unmounted';
 import Cocktails from './composants/Cocktails';
+import Pays from "./composants/Pays"
 export default function App() {
 
  /*  function texteLong(){
@@ -17,6 +18,7 @@ export default function App() {
   const [show, setShow] = useState(true);
   return (
     <View style={styles.container}>
+      <Pays />
       { false && <Cocktails /> }
       {/*<ScrollView>
         <Text>{texteLong()}</Text>
