@@ -59,3 +59,9 @@ npx expo install react-native-pager-view@6.1.2 react-native-safe-area-context@4.
 <ul> => <Menu.Navigator>
     <li><a href=""></a> </li> <Menu.Screen name="home" component={Accueil}/>
 </ul>
+
+
+cas pratique : 
+=> pouvez vous modifier le composant <Profil> 
+
+=> ajouter un bouton => contenant le texte "modifier mot de passe" 

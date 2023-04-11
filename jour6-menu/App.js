@@ -18,7 +18,12 @@ export default function App() {
       <Menu.Navigator screenOptions={{
         tabBarActiveBackgroundColor : "#eee",
         tabBarStyle : { borderColor : "red" , borderWidth : 3 },
-        tabBarShowLabel : true, 
+        tabBarShowLabel : false, 
+       /*  title : ((text) => { return <View>
+          <Text>{JSON.stringify(text)}</Text>
+          <MaterialCommunityIcons name="air-horn" color="black" size={40} />
+          </View>  
+        })() */
       }}>
         {/** https://reactnavigation.org/docs/bottom-tab-navigator */}
         <Menu.Screen name="home" component={Accueil} 

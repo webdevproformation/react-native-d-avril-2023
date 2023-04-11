@@ -1,10 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View , TouchableWithoutFeedback , Button } from 'react-native'
 import React from 'react'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Profil = () => {
   return (
     <View style={styles.box}>
       <Text  style={styles.titre}>Profil</Text>
+      {/** https://pictogrammers.com/library/mdi/ */}
+      <TouchableWithoutFeedback onPress={() => alert("coucou")}>
+        <MaterialCommunityIcons size={50} color="red" name="account"/>
+      </TouchableWithoutFeedback>
+      <Button onPress={() => {}} title="modifier mot de passe" />
     </View>
   )
 }
