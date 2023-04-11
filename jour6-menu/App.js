@@ -17,7 +17,7 @@ export default function App() {
       <Menu.Navigator screenOptions={{
         tabBarActiveBackgroundColor : "#eee",
         tabBarStyle : { borderColor : "red" , borderWidth : 3 },
-        tabBarShowLabel : false, 
+        tabBarShowLabel : false
        /*  title : ((text) => { return <View>
           <Text>{JSON.stringify(text)}</Text>
           <MaterialCommunityIcons name="air-horn" color="black" size={40} />
@@ -45,6 +45,7 @@ export default function App() {
           tabBarIcon : function(){
             return <MaterialCommunityIcons name="lock-open" color="black" size={40} />
           }
+         
         }}/>
          
        </Menu.Navigator>
