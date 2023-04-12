@@ -12,6 +12,7 @@ const Tab = createBottomTabNavigator();
 
 const Menu = () => {
     const { profil } = useContext(ProfilContext);
+    // 15h32 bon café @ toute suite !!
   return (
         <NavigationContainer>
             <Tab.Navigator>
@@ -20,8 +21,7 @@ const Menu = () => {
                         return <MaterialCommunityIcons name="home" color="black" size={20} />
                     }
                 }} /> 
-                {profil.isLogged 
-                
+                { profil.isLogged 
                     ?
                     <Tab.Screen name='profil' component={ Profil } options={{
                         tabBarIcon : () => {

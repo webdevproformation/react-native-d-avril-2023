@@ -39,3 +39,20 @@ hook
 useEffect( function(){
     fetch()
 } , [])
+
+
+--------------------------
+
+cas pratique 
+
+remplir la page d'accueil avec une liste de cocktails => 
+
+www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
+
+réaliser un affichage 
+
+image du cocktail 
+titre
+
+dans le composant Accueil 
+utiliser useEffect()
