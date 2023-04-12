@@ -6,6 +6,7 @@ import Profil from './composant/Profil';
 export default function App() {
   return (
     <View style={styles.container}>
+      {/** Formulaire ET Profil composants frères */}
       <Formulaire />
       <Profil />
       <StatusBar style="auto" />
