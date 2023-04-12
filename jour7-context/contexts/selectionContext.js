@@ -20,7 +20,11 @@ export function SelectionContextProvider(props){
         setListe(cloneListe); 
     }
 
-    return <SelectionContext.Provider value={{liste , selectionner}}>
+    function filteredListe(){
+        return liste.filter(item  => item.selected)
+    }
+
+    return <SelectionContext.Provider value={{liste , selectionner , filteredListe}}>
         {props.children}
     </SelectionContext.Provider>
 }
