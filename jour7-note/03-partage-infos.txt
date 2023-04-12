@@ -56,6 +56,10 @@ export const Profil = ({nom}) => {
 => créer un nouveau projet => npx create-expo-app --template 
 jour7-context 
 
+cas pratique créer un composant => Formulaire 
+            contient 2 TextInput et Button 
+                    un composant => Profil 
+                        <Text>profil</Text>
     
 
 
