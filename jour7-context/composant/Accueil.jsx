@@ -27,9 +27,7 @@ const Accueil = () => {
     </View>
   )
 }
-
 export default Accueil
-
 const styles = StyleSheet.create({
   resultats : { flexDirection : "row" , flexWrap : "wrap" , justifyContent : "space-between"},
   cocktail : { width : "49%",marginBottom : 10}, 
