@@ -56,3 +56,16 @@ titre
 
 dans le composant Accueil 
 utiliser useEffect()
+
+cas pratique 1 
+les boutons sous les cocktails ne doivent être affichés QUE si l'utilisateur est au préalable connecté 
+si il n'est connecté pas de bouton 
+
+cas pratique 2
+une fois que l'utilisateur s'est connecté 
+les boutons s'affichent ET l'utilisateur va pouvoir sélectionner un ou plusieurs cocktails dans la page 
+en cliquant sur le bouton 
+les cocktails qui sont sélectionnés => changer le bouton bleu en un bouton rose 
+
+une fois que l'utilisateur a cliqué si il va dans la page Profil 
+=> on va lui afficher l'ensemble des cocktails qu'il a sélectionné sans son nom 
