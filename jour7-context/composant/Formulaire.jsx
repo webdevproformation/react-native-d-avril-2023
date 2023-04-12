@@ -2,7 +2,7 @@ import { StyleSheet, Text, View , TextInput, Button } from 'react-native'
 import React , {useContext , useState} from 'react'
 import { ProfilContext } from "../contexts/profilContext"
 
-const Formulaire = () => {
+const Formulaire = ({navigation}) => {
 
   const { profil, login , logout } = useContext(ProfilContext);
   const [email , setEmail] = useState("")
@@ -17,10 +17,11 @@ const Formulaire = () => {
     const verif = login(identifiants)
     //console.log(profil)
     if(verif){ // si je n'ai pas de message = "" => je peux vider le formulaire
-      // vider le formulaire et le message
+      // vider le formulaire et le message et redirection avec la page de connexion
       setEmail("")
       setPassword("")
       setMessage("")
+      navigation.navigate("profil")
     }else {
       // sinon j'affiche un message 
       setMessage("identifiants invalides")

@@ -2,9 +2,14 @@ import { Button, StyleSheet, Text, View } from 'react-native'
 import React , { useContext } from 'react'
 import { ProfilContext } from "../contexts/profilContext"
 
-const Profil = () => {
+const Profil = ({navigation}) => {
  
   const {profil , logout} = useContext(ProfilContext) 
+
+  function deconnexion(){
+    logout()
+    navigation.navigate("connexion")
+  }
 
   return (
     <View style={styles.box}>
@@ -12,7 +17,7 @@ const Profil = () => {
       ? 
         <View>
           <Text style={styles.titre}>Bienvenue { profil.nom }</Text>
-          <Button onPress={() => logout()} title="2eme deconnexion" color="purple" />
+          <Button onPress={() => deconnexion()} title="2eme deconnexion" color="purple" />
         </View>
       : 
         <Text>Veuillez vous connecter pour accéder à votre profil</Text>
