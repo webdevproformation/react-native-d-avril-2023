@@ -9,6 +9,9 @@ import ProfilNavigation from "./composants/ProfilNavigation"
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import ConnexionNavigation from './composants/ConnexionNavigation';
 const Menu = createBottomTabNavigator()
+
+import "react-native-gesture-handler"
+
 // rdv 13h40 
 export default function App() {
 

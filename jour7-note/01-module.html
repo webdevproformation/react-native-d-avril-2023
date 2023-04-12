@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- à partir de 2015 => ES6 de javascript ajoute de nombreux mots clé au langage 
+        export 
+        import from 
+        => système de module ECMA Script 
+
+        export default 
+
+        => ce système de module permet de créer des scripts avec scope (portée)
+    -->
+    <script type="module">
+        let a = 10 ;
+    </script>
+    <script type="module">
+        import { getLogo , variable , Etudiant, toto } from "./01-exemple.js"
+        import superObjet from "./01-lib.js" // pas besoin de mettre d'accolades autour de l'import
+        console.log(getLogo());
+        // export default => import sans accolade 
+        // export default calcul => import calcul => dans l'import vous pouvez utiliser le nom de ce qui exporté par défaut
+        // MAIS aucun soucis pour lui donner un autre nom
+    </script>
+    <script type="module">
+        import Compteur , {distance as d} from "./01-test.js"
+        // import d'un default ET je le renomme
+        // import d'un export de base et je renomme cette variable d 
+        console.log(Compteur());
+        console.log(d)
+    </script>
+    <script type="module">
+        import * as lib from "./02-grosse-lib.js"
+
+        console.log(lib.a)
+        console.log(lib.h)
+        console.log(lib.d)
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export
+    </script>
+</body>
+</html>
