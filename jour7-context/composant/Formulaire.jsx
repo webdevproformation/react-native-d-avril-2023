@@ -21,7 +21,7 @@ const Formulaire = ({navigation}) => {
       setEmail("")
       setPassword("")
       setMessage("")
-      navigation.navigate("profil")
+      navigation.navigate("home")
     }else {
       // sinon j'affiche un message 
       setMessage("identifiants invalides")

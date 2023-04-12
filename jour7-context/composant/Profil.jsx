@@ -8,7 +8,7 @@ const Profil = ({navigation}) => {
 
   function deconnexion(){
     logout()
-    navigation.navigate("connexion")
+    navigation.navigate("home")
   }
 
   return (
