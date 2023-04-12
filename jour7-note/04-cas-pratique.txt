@@ -1,0 +1,37 @@
+
+Cas pratique 
+ajouter une barre de menu en bas de l'écran 
+
+Dans cette barre de menu 
+
+Accueil
+   => Hello 
+si on est connecté 
+    Profil 
+si on n'est pas connecté 
+    Formulaire de Connection 
+
+organisation des fichiers dans un projet React Native 
+
+à la racine du projet 
+App.js => seul et ne pas mettre d'autres composants 
+
+contexts => dossier qui contient les différents contextes globaux de l'application 
+
+composants/ 
+    - front/ 
+    - back/
+    - communs/ 
+
+services => appel à des API 
+    authentification 
+    articles
+    base de données appel 
+
+hook 
+
+=> https://github.com/eramudeep/react-native-ecommerce
+
+useEffect( function(){
+    fetch()
+} , [])
