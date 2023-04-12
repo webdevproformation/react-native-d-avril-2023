@@ -7,14 +7,19 @@ const Formulaire = () => {
   const { profil, login , logout } = useContext(ProfilContext);
   const [email , setEmail] = useState("")
   const [password , setPassword] = useState("")
-  function authentification(){
+   function authentification(){
     const identifiants = {
       email : email ,
       password : password
     }
-    console.log(identifiants)
+    //console.log(identifiants)
     login(identifiants)
-    console.log(profil)
+    //console.log(profil)
+    // vider le formulaire
+    if(profil.message.length === 0){
+      setEmail("")
+      setPassword("")
+    }
   }
 
   return (
@@ -28,6 +33,7 @@ const Formulaire = () => {
             <TextInput placeholder='email' style={styles.input} onChangeText={(text) => setEmail(text)} value={email}/>
             <TextInput placeholder='password' style={styles.input} onChangeText={(text) => setPassword(text)} value={password} />
             <Button title="soumettre" onPress={() => authentification()}/>
+            {profil.message.length > 0  && <Text style={styles.alert}>{profil.message}</Text>}
           </View>
       }
       
@@ -39,5 +45,6 @@ export default Formulaire
 
 const styles = StyleSheet.create({
     box : { margin : 10},
-    input : { borderWidth : 1 , borderColor : "black" , padding : 5 , marginBottom : 10}
+    input : { borderWidth : 1 , borderColor : "black" , padding : 5 , marginBottom : 10},
+    alert : { padding : 10 , color : "red"}
 })
