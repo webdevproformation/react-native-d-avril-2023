@@ -13,26 +13,23 @@ export function ProfilContextProvider (props){
         nom : "Alain" ,
         email : "a@yahoo.fr",
         password : "123456",
-        isLogged : false,
-        message : ""
+        isLogged : false
     })
+    // rdv 13h35 bon appétit !!!!!!!!!
 
     function login(crediantials){ // identifiants (connexion)
         const cloneProfil = {...profil}
         if(crediantials.email === profil.email && crediantials.password === profil.password ){
             cloneProfil.isLogged = true 
-            cloneProfil.message = "" 
             setProfil(cloneProfil)
-            return ;
+            return true; // les identifiants sont corrects
         }
-        cloneProfil.message = "identifiants invalides" ; 
-        setProfil(cloneProfil)
+        return false
     }
 
     function logout(){ // change la valeur isLogged de profil => true => false (déconnexion)
         const cloneProfil = {...profil} ; 
         cloneProfil.isLogged = false 
-        cloneProfil.message = "" 
         setProfil(cloneProfil)
     }
 
