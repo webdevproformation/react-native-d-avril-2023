@@ -4,7 +4,7 @@ import { ProfilContext } from "../contexts/profilContext"
 
 const Profil = () => {
  
-  const profil = useContext(ProfilContext) 
+  const {profil} = useContext(ProfilContext) 
 
   return (
     <View style={styles.box}>

@@ -4,7 +4,7 @@ import { ProfilContext } from "../contexts/profilContext"
 
 const Formulaire = () => {
 
-  const { profil, login } = useContext(ProfilContext);
+  const { profil, login , logout } = useContext(ProfilContext);
   const [email , setEmail] = useState("")
   const [password , setPassword] = useState("")
   function authentification(){
@@ -19,10 +19,18 @@ const Formulaire = () => {
 
   return (
     <View style={styles.box}>
-      <Text>Formulaire</Text>
-      <TextInput placeholder='email' style={styles.input} onChangeText={(text) => setEmail(text)} value={email}/>
-      <TextInput placeholder='password' style={styles.input} onChangeText={(text) => setPassword(text)} value={password} />
-      <Button title="soumettre" onPress={() => authentification()}/>
+      { profil.isLogged  
+        ? 
+         <Button  onPress={() => logout()} title="deconnexion" />
+        : 
+          <View>
+            <Text>Formulaire</Text>
+            <TextInput placeholder='email' style={styles.input} onChangeText={(text) => setEmail(text)} value={email}/>
+            <TextInput placeholder='password' style={styles.input} onChangeText={(text) => setPassword(text)} value={password} />
+            <Button title="soumettre" onPress={() => authentification()}/>
+          </View>
+      }
+      
     </View>
   )
 }
