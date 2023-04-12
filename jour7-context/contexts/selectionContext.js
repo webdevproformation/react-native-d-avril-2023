@@ -1,13 +1,26 @@
-import { createContext } from "react"
+import { createContext, useEffect , useState } from "react"
 
 export const SelectionContext = createContext();
 
 export function SelectionContextProvider(props){
 
-    const selection = []
+    const [liste, setListe] = useState([])
 
-    return <SelectionContext.Provider value={selection}>
+    useEffect( function(){
+        fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
+          .then(reponse => reponse.json())
+          .then(data => setListe(data.drinks))
+      } , [])
+
+    function selectionner(nom){
+        const cloneListe = [...liste];
+        const cocktailSelectionne = cloneListe.find(function(item){ return item.strDrink === nom })
+        const index = cloneListe.indexOf(cocktailSelectionne)
+        cloneListe[index].selected = true
+        setListe(cloneListe); 
+    }
+
+    return <SelectionContext.Provider value={{liste , selectionner}}>
         {props.children}
     </SelectionContext.Provider>
-
 }

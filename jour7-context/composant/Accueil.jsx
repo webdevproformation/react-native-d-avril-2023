@@ -1,16 +1,12 @@
 import {  StyleSheet, Text, View , ScrollView , Image , Button } from 'react-native'
-import React , {useEffect , useState , useContext} from 'react'
+import React , { useContext} from 'react'
 import {ProfilContext} from "../contexts/profilContext"
+import {SelectionContext} from "../contexts/selectionContext"
 
 const Accueil = () => {
-  const [liste, setListe] = useState([])
+  
   const {profil} = useContext(ProfilContext)
-
-  useEffect( function(){
-    fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
-      .then(reponse => reponse.json())
-      .then(data => setListe(data.drinks))
-  } , [])
+  const {liste , selectionner} = useContext(SelectionContext)
 
   return (
     <View>
@@ -21,7 +17,7 @@ const Accueil = () => {
               return <View style={styles.cocktail} key={key}>
                 <Text>{item.strDrink}</Text>
                 <Image source={{ uri : item.strDrinkThumb }} style={styles.img}/>
-                {profil.isLogged && <Button onPress={() => {}} title="ajouter" /> }
+                {profil.isLogged && <Button onPress={() => selectionner(item.strDrink)} title={item.selected ? "selectionné" : "ajouter"} color={ item.selected ? "pink" : "blue" }/> }
               </View>
             })}
           </View>
