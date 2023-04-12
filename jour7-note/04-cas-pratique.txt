@@ -11,6 +11,8 @@ si on est connecté
 si on n'est pas connecté 
     Formulaire de Connection 
 
+npm install @react-navigation/native @react-navigation/bottom-tabs react-native-vector-icons
+
 
 
 organisation des fichiers dans un projet React Native 
