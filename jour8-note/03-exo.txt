@@ -1,0 +1,14 @@
+créer un nouveau composant Exo1 
+
+
+<Image source={{  uri: "https://source.unsplash.com/random/100x200" }} style={width: 100 , height : 200}/>
+<Button>
+<Button>
+<Button>
+<Button>
+
+si vous cliquez sur le premier bouton => zoom l'image augmenter width 120 et height 120 zoom 
+si vous cliquez sur le deuxieme bouton => zoom l'image augmenter width 80 et height 80 dezoom
+si vous cliquez sur le troisieme bouton => zoom l'image augmenter width 0 et height 0  hide
+si vous cliquez sur le dernier bouton => zoom l'image augmenter width: 100 , height : 200 remise à zero
+
