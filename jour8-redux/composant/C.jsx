@@ -9,6 +9,7 @@ const C = () => {
   return (
     <View>
       <Text>C</Text>
+      
       <Text>{valeur}</Text>
       <Button onPress={ () => dispatch({type : "AUGMENTER"})} title="augmenter" />
     </View>

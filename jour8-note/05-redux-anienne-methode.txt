@@ -13,3 +13,12 @@ const store = createStore(reducer) // createContext()
 
 store.dispatch("ACTION") // modifier le store 
 store.getState()  // récupérer la valeur du store 
+
+créer le composant Exo2 
+
+dans ce composant vous allez mettre juste un Bouton 
+utiliser le hook useDispatch pour communiquer avec le store 
+
+lorsque vous cliquez sur le bouton => augmenter de + 5 le store 
+
+modifier la fonction réductrice pour accepter cette action 
