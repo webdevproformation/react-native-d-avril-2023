@@ -1,23 +1,9 @@
 import {  Text, View , Image, Button } from 'react-native'
-import React , {useReducer} from 'react'
-function reducer(state, action){
-    switch(action){
-        case "ZOOM":
-            return {width: 120, height :120}
-        case "DEZOOM":
-            return {width: 80, height :80}
-        case "HIDE":
-            return {width: 0, height :0}
-        case "RESET":
-            return {width: 100, height :100 }
-        case "PERSONNALISE":
-              return {width: 120, height :200}
-        default :
-            return state 
-    }
-}
+import React , {useContext} from 'react'
+import { ExoContext } from "../contexts/exoContext"
+
 const Exo2 = () => {
-  const [ taille , dispatch] = useReducer( reducer , {width: 100, height :100})
+  const {taille , dispatch} = useContext(ExoContext); 
   return (
     <View>
       <Text>Exo2</Text>
