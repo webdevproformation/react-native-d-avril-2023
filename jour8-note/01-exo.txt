@@ -1,0 +1,20 @@
+import { StyleSheet, Text, View,Button} from 'react-native'
+import React,{useState} from 'react'
+
+const A = () => {
+
+ const [nb,setNb] = useState(0);
+  return (
+ <View>
+   <Text>le state</Text>
+   <Text>{nb}</Text>
+   <Button title='+' onPress={() =>{setNb(nb + 1)}}/>
+   <Button title='-' onPress={() =>{setNb(nb - 1)}}/>
+   <Button title='=' onPress={() =>{setNb(0)}}/>
+ </View>
+  )
+}
+
+export default A
+
+const styles = StyleSheet.create({})
