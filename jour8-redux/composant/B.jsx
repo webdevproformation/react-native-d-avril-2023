@@ -3,12 +3,12 @@ import React , { useReducer , useState } from 'react'
 
 function reduce( state , action ){ // regroupé dans une seule fonction 
     switch (action.type) {
-        /* case "AUGMENTER" : 
+        case "AUGMENTER" : 
             return state + 1 ;
         case "DIMINUER" :
             return state - 1 ;
         case "ZERO" :
-            return 0 ; */
+            return 0 ; 
         case "AUGMENTER_P" :
             return state + parseInt(action.payload )
         default :
@@ -36,9 +36,9 @@ const B = () => {
     <View>
       <Text>composant b</Text>
       <Text>{ nb }</Text>
-      <Button onPress={() => dispatch("AUGMENTER")} title="augmenter" color="purple" />
-      <Button onPress={() => dispatch("DIMINUER")} title="diminuer" color="pink" />
-      <Button onPress={() => dispatch("ZERO")} title="remise à 0"  />
+      <Button onPress={() => dispatch({ type :"AUGMENTER"  })} title="augmenter" color="purple" />
+      <Button onPress={() => dispatch({ type :"DIMINUER"  })} title="diminuer" color="pink" />
+      <Button onPress={() => dispatch({ type :"ZERO"  })} title="remise à 0"  />
       <TextInput value={t} onChangeText={(texte) => setT(texte)} placeholder='chiffre' />
       <Button onPress={() => dispatch({ type : "AUGMENTER_P" , payload : t })} title="augmentation variable"  />
     </View>
