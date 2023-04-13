@@ -1,0 +1,29 @@
+Context et useContext + useReducer ==== Redux 
+
+Historiquement d'abord il y a eu Redux puis l'équipe de React / React Native a créé 
+Context et useContext + useReducer (en s'inspirant de Redux)
+
+Dans Redux etat global => il s'appelle un store (et non un contexte )
+
+
+store mini base de données qui contient les données globale 
+
+             fonction reductrice   =>  
+ dispatch (action)                     store 
+
+            <====   Composant <===
+
+State Manager  => gestionnaire d'état  utilisable sur de nombreux framework de création de site internet et ou d'application mobile 
+
+=> ReactJS (web) / React Native (smartphone) / Angular / VueJS 
+
+
+=> par défaut redux n'est pas installé dans React => 
+ajouter en + redux et react-redux
+
+lancer un deuxième terminal 
+cd jour8-redux
+
+npm i redux react-redux
+
+npm i @reduxjs/toolkit 

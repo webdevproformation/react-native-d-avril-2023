@@ -1,6 +1,5 @@
 créer un nouveau composant Exo1 
 
-
 <Image source={{  uri: "https://source.unsplash.com/random/100x200" }} style={width: 100 , height : 200}/>
 <Button>
 <Button>
@@ -15,3 +14,6 @@ si vous cliquez sur le dernier bouton => zoom l'image augmenter width: 100 , hei
 utilisez useReducer pour gérer le state 
 
 // rdv 13h30 bon appétit !!!!!!!!!!
+
+
+cd ..
