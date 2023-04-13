@@ -5,9 +5,11 @@ import { ProfilContext } from "../contexts/profilContext"
 const Formulaire = ({navigation}) => {
 
   const { profil, login , logout } = useContext(ProfilContext);
+
   const [email , setEmail] = useState("")
   const [password , setPassword] = useState("")
   const [message , setMessage] = useState("")
+
    function authentification(){
     const identifiants = {
       email : email ,
@@ -42,7 +44,6 @@ const Formulaire = ({navigation}) => {
             {message.length > 0  && <Text style={styles.alert}>{message}</Text>}
           </View>
       }
-      
     </View>
   )
 }
