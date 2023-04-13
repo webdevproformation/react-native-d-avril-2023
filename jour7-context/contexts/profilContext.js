@@ -11,8 +11,8 @@ export function ProfilContextProvider (props){
     // Provider => Fournir à l'ensemble de notre App le state global
     const [profil , setProfil] = useState({
         nom : "Alain" ,
-        email : "a@yahoo.fr",
-        password : "123456",
+        email : "a",
+        password : "1",
         isLogged : false
     })
     // rdv 13h35 bon appétit !!!!!!!!!

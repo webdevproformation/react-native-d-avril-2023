@@ -99,3 +99,80 @@ si je veux partager des données entre plusieurs composants
 
 // hello hello vous m'entendez ???? 
 // je redémarre @ toute suite !!! 
+
+fichier ...Context.js  => $_SESSION (en PHP)
+
+export const PanierContext = createContext() // etat globale
+
+export function PanierContextProvider(props){ // composant 
+
+    const [nb] = useState()
+
+    useEffect( , [])
+    useEffect( , [])
+
+    traitement1 setNb
+    traitement2 setListe
+    traitement3 setTraitement
+
+    return <PanierContext.Provider value={{ nb , traitement1, traitement2, traitement3 }}>
+        {props.children} // permet d'afficher les composants enfants dans App
+    </PanierContext.Provider>
+}
+
+function App(){ 
+    return <PanierContextProvider>
+        <View> // les composants enfants 
+            <A /> // les composants enfants 
+            <B /> // les composants enfants 
+            <C /> // les composants enfants 
+        </View>
+    </PanierContextProvider>
+}
+
+function C(){
+     const {nb}  = useContext(PanierContext) // modification de l'affichage dans une autre composant
+}
+
+function B(){
+     const {traitement1} = useContext(PanierContext) // exécuter une traitement globale
+}
+
+Attention vous ne pouvez pas utiliser <PanierContextProvider> et useContext dans le même composant 
+
+useContext est OBLIGATOIREMENT à utiliser dans les composants enfant de <PanierContextProvider>
+
+
+
+
+react native 
+
+barre de menu en bas de l'écran 
+
+const Bottom = createBottomTabNavigator() 
+
+<Bottom.Navigator>
+    <Bottom.Screen name="accueil" component={Accueil} />
+    <Bottom.Screen name="contact" component={Contact} />
+    <Bottom.Screen name="login" component={Login} />
+    <Bottom.Screen name="cgv-menu" component={CGVNav} />
+</Bottom>
+
+<ul>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+</ul>
+
+const Lien = createNativeStackNavigator() // navigation en pile (les résultats se pose sur la page existante)
+
+<Lien.Navigator>
+    <Lien.Screen name="cgv" component={CGV} />
+    <Lien.Screen name="cgv-details" component={CGVDetails} />
+</Lien.Navigator>
+
+<a href=""></a>
+<a href=""></a>
+
+// rdv 10h57 bon café @ toute suite 

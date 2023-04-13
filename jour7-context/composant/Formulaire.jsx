@@ -2,7 +2,7 @@ import { StyleSheet, Text, View , TextInput, Button } from 'react-native'
 import React , {useContext , useState} from 'react'
 import { ProfilContext } from "../contexts/profilContext"
 
-const Formulaire = ({navigation}) => {
+const Formulaire = ({navigation}) => { 
 
   const { profil, login , logout } = useContext(ProfilContext);
 

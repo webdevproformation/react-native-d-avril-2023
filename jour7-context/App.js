@@ -2,8 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 
 import { ProfilContextProvider } from './contexts/profilContext';
-import Menu from './composant/Menu';
 import { SelectionContextProvider } from './contexts/selectionContext';
+import Menu from './composant/Menu';
 
 export default function App() {
 
