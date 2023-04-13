@@ -204,3 +204,5 @@ accès plus profond
 // bouton qui permet de mettre à 0 le state
 
 // une fois que le composant est créé => l'exécuter dans App 
+
+

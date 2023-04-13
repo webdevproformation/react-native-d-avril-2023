@@ -1,14 +1,16 @@
-import { StyleSheet, Text, View , Button } from 'react-native'
-import React , { useReducer } from 'react'
+import { StyleSheet, Text, View , Button , TextInput } from 'react-native'
+import React , { useReducer , useState } from 'react'
 
 function reduce( state , action ){ // regroupé dans une seule fonction 
-    switch (action) {
-        case "AUGMENTER" : 
+    switch (action.type) {
+        /* case "AUGMENTER" : 
             return state + 1 ;
         case "DIMINUER" :
             return state - 1 ;
         case "ZERO" :
-            return 0 ;
+            return 0 ; */
+        case "AUGMENTER_P" :
+            return state + parseInt(action.payload )
         default :
             return state ; 
     }
@@ -28,13 +30,16 @@ function reduce( state , action ){ // regroupé dans une seule fonction
 const B = () => {
   // const [nb, setNb] = useState(0)
   const [ nb , dispatch ] = useReducer( reduce , 0 )
+  const [ t , setT ] = useState( "" )
   return (
     <View>
       <Text>composant b</Text>
       <Text>{ nb }</Text>
-      <Button onPress={() => dispatch("AUGMENTER")} title="augmenter" color="purple" style={styles.btn} />
-      <Button onPress={() => dispatch("DIMINUER")} title="diminuer" color="pink" style={styles.btn} />
-      <Button onPress={() => dispatch("ZERO")} title="remise à 0"  style={styles.btn} />
+      <Button onPress={() => dispatch("AUGMENTER")} title="augmenter" color="purple" />
+      <Button onPress={() => dispatch("DIMINUER")} title="diminuer" color="pink" />
+      <Button onPress={() => dispatch("ZERO")} title="remise à 0"  />
+      <TextInput value={t} onChangeText={(texte) => setT(texte)} />
+      <Button onPress={() => dispatch({ type : "AUGMENTER_P" , payload : t })} title="+ 12"  />
     </View>
   )
 }
