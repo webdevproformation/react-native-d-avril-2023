@@ -38,8 +38,8 @@ const B = () => {
       <Button onPress={() => dispatch("AUGMENTER")} title="augmenter" color="purple" />
       <Button onPress={() => dispatch("DIMINUER")} title="diminuer" color="pink" />
       <Button onPress={() => dispatch("ZERO")} title="remise à 0"  />
-      <TextInput value={t} onChangeText={(texte) => setT(texte)} />
-      <Button onPress={() => dispatch({ type : "AUGMENTER_P" , payload : t })} title="+ 12"  />
+      <TextInput value={t} onChangeText={(texte) => setT(texte)} placeholder='chiffre' />
+      <Button onPress={() => dispatch({ type : "AUGMENTER_P" , payload : t })} title="augmentation variable"  />
     </View>
   )
 }
