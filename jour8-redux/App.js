@@ -7,14 +7,16 @@ import Exo2 from './composant/Exo2';
 import { ExoContextProvider } from './contexts/exoContext';
 import { Provider } from 'react-redux';
 import { store } from "./redux/store";
+import C from './composant/C';
 
 export default function App() {
   return (
     <Provider store={store}>
       <ExoContextProvider>
         <View style={styles.container}>
-          <Exo2 />
+            <C />
           {false && <>
+            <Exo2 />
             <Exo />
             <A />
             <B />
