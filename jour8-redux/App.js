@@ -3,13 +3,18 @@ import { StyleSheet, View } from 'react-native';
 import A from './composant/A';
 import B from './composant/B';
 import Exo from './composant/Exo';
+import Exo2 from './composant/Exo2';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Exo />
-      <A />
-      <B />
+      <Exo2 />
+      {false && <>
+        <Exo />
+        <A />
+        <B />
+      </>}
+      
       <StatusBar style="auto" />
     </View>
   );
