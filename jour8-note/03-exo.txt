@@ -12,3 +12,6 @@ si vous cliquez sur le deuxieme bouton => zoom l'image augmenter width 80 et hei
 si vous cliquez sur le troisieme bouton => zoom l'image augmenter width 0 et height 0  hide
 si vous cliquez sur le dernier bouton => zoom l'image augmenter width: 100 , height : 200 remise à zero
 
+utilisez useReducer pour gérer le state 
+
+// rdv 13h30 bon appétit !!!!!!!!!!
