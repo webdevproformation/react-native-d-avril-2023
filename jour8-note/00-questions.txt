@@ -55,4 +55,47 @@ useEffect( function(){ // effectuer un traitement suite à une modification
         .then( data => setDonnee(data) ) ....
 } , [compteur])
 
-// 
+
+
+// ----------------------
+function App(){
+    return <View>
+        <A />
+        <B /> {/* exécuter une fonction (composant) en jsx */}
+        <C />
+        <D />
+    </View>
+}
+
+
+function B(){
+
+    useEffect(function(){
+        fetch()
+            .then()
+            .then( setNb()) // <B /> 
+    } , [])
+
+    return <Text>b</Text>
+}
+
+// js de base 
+function b(){
+    // traitement
+    // traitement
+    // traitement
+    // traitement
+}
+
+b()
+
+// useState et useEffect => Locale au composant concerné 
+si je veux partager des données entre plusieurs composants 
+
+// utiliser useState et useEffect dans une Contexte => partager les données entre plusieurs composants 
+
+// page de connexion 
+// afficher le profil 
+
+// hello hello vous m'entendez ???? 
+// je redémarre @ toute suite !!! 
