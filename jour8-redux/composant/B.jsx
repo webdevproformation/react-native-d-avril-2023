@@ -29,6 +29,7 @@ function reduce( state , action ){ // regroupé dans une seule fonction
 // Contexte + useReducer => Redux  
 const B = () => {
   // const [nb, setNb] = useState(0)
+  // B est plus déclaratif 
   const [ nb , dispatch ] = useReducer( reduce , 0 )
   const [ t , setT ] = useState( "" )
   return (
