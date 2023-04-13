@@ -176,3 +176,31 @@ const Lien = createNativeStackNavigator() // navigation en pile (les résultats 
 <a href=""></a>
 
 // rdv 10h57 bon café @ toute suite 
+
+// créer un nouveau projet 
+// jour8-redux
+// cd ..
+// npx create-expo-app --template
+
+// Blank => projet vide App.js  javascript 
+// Blank => projet vide App.js  typescript en + du typage 
+//  A.jsx
+//  A.tsx
+
+// Blank + navigation => avec en + un ajout des composants de la navigation 
+
+// Blank (Bare) => en vide en + donner un accès créer des composants en java Kotlin
+accès plus profond 
+
+// cas pratique 
+// créer un composant qui s'appelle A 
+
+// state qui s'appelle nb et qui a pour valeur 0 
+
+// dans la partie vue 
+// text qui affiche le state  
+// bouton qui permet de faire augmenter de + 1 le state
+// bouton qui permet de faire diminuner de - 1 le state
+// bouton qui permet de mettre à 0 le state
+
+// une fois que le composant est créé => l'exécuter dans App 
