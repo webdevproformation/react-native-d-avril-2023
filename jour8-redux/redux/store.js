@@ -14,7 +14,6 @@ function reducerNb (state = 200 , {type , payload}){
 }
 
 const profil = {login : "a" , isLogged : false }
-
 function reducerProfil (state = profil , action){
     switch(action.type){
         case "LOGIN" :
@@ -25,13 +24,10 @@ function reducerProfil (state = profil , action){
             return state 
     }
 }
-
 const reducer = { 
     reducerNb  : reducerNb, 
     reducerProfil : reducerProfil
 }
 // combineReducers({}) => createStore()
-
-
 export const store = configureStore({reducer}) // créer mon store 
  
