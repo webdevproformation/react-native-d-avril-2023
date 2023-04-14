@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, ScrollView , FlatList } from 'react-native'
+import { StyleSheet, Text, View, ScrollView , Button } from 'react-native'
 import React , { useEffect , useState } from 'react'
 const Articles = ({db, useForceUpdate}) => {
     const [ update , setUpdate ] = useForceUpdate()
@@ -24,10 +24,14 @@ const Articles = ({db, useForceUpdate}) => {
         <View style={styles.box}>
         <Text>Liste des articles en base de données</Text>
             { articles.map(function(article){
-                return <View key={article.id}>
+                return <View key={article.id} style={styles.article}>
                         <Text>{ article.titre }</Text>
                         <Text>{ article.contenu }</Text>
                         <Text>{ article.date }</Text>
+                        <View style={styles.actions}>
+                            <Button title="modifier" onPress={ () => {} } color="orange"/>
+                            <Button title="supprimer" onPress={ () => {} } color="red"/>
+                        </View>
                     </View>
             } ) }
         </View>
@@ -36,6 +40,8 @@ const Articles = ({db, useForceUpdate}) => {
 }
 export default Articles
 const styles = StyleSheet.create({
-    box : {padding : 10},
-    scroll:{ flex : 1 }
+    box : {padding : 10 },
+    scroll:{ flex : 1 },
+    article : { borderBottomWidth : 1 , borderBottomColor : "black" , paddingBottom : 10 , marginBottom : 10} , 
+    actions : {flexDirection : "row" , justifyContent: "space-evenly" , marginVertical : 10}
 })
