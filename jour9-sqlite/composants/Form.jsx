@@ -1,10 +1,20 @@
 import { StyleSheet, Text, View , TextInput , Button } from 'react-native'
-import React , { useState } from 'react'
+import React , { useState , useContext, useEffect } from 'react'
+import {ArticleContext} from "../context/articleContext"
 
 const Form = ({db}) => {
+
     
     const [titre, setTitre] = useState("")
     const [contenu, setContenu] = useState("")
+
+    const {articleAModifier} = useContext( ArticleContext );
+
+    useEffect( function(){
+        setTitre(articleAModifier.titre)
+        setContenu(articleAModifier.contenu)
+    }, [articleAModifier])
+
     function ajouter(){
         db.transaction(function(tx){
             tx.executeSql( `INSERT INTO articles ( titre, contenu ) VALUES ( ? , ? );`,
