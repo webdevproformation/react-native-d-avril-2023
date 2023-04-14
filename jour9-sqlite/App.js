@@ -1,9 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View , Platform } from 'react-native';
 import * as SQLITE from "expo-sqlite"
 import {useEffect} from "react"
 
-const db = SQLITE.openDatabase("demo.sqlite");
+function openDB(){
+  if(Platform.OS === "web"){
+    return {
+      transaction : () => {
+        return {
+          executeSql : () => {} 
+        }
+      }
+    }
+  }
+  return SQLITE.openDatabase("demo.sqlite");
+}
+
+
+const db = openDB() ; 
 
 export default function App() {
 
