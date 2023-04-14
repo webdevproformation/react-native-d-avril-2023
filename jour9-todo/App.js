@@ -50,7 +50,12 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Form db={db}/>
-      {resultats.map(function(item){ 
+      <Text>Encours</Text>
+      {resultats.filter(function(item){ return item.status === 0}).map(function(item){ 
+        return <Text key={item.id} style={styles.ligne} onPress={() => changer(item)}>{ JSON.stringify(item) }</Text>
+      })}
+      <Text>Finalisé</Text>
+       {resultats.filter(function(item){ return item.status === 1}).map(function(item){ 
         return <Text key={item.id} style={styles.ligne} onPress={() => changer(item)}>{ JSON.stringify(item) }</Text>
       })}
       <StatusBar style="auto" />
