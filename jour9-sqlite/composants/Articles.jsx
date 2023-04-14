@@ -43,5 +43,5 @@ const styles = StyleSheet.create({
     box : {padding : 10 },
     scroll:{ flex : 1 },
     article : { borderBottomWidth : 1 , borderBottomColor : "black" , paddingBottom : 10 , marginBottom : 10} , 
-    actions : {flexDirection : "row" , justifyContent: "space-evenly" , marginVertical : 10}
+    actions : { flexDirection : "row" , justifyContent: "space-evenly" , marginVertical : 10}
 })
