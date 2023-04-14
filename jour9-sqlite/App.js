@@ -41,7 +41,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.titre}>Utiliser SQLITE dans React Native</Text>
-      <Form />
+      <Form db={db}/>
       <StatusBar style="auto" />
     </View>
   );

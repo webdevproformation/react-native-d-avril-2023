@@ -1,12 +1,23 @@
 import { StyleSheet, Text, View , TextInput , Button } from 'react-native'
 import React , {useState} from 'react'
 
-const Form = () => {
+const Form = ({db}) => {
     const [titre, setTitre] = useState("")
     const [contenu, setContenu] = useState("")
     function ajouter(){
-        setTitre("")
-        setContenu("")
+        db.transaction(function(tx){
+            tx.executeSql( `INSERT INTO articles ( titre, contenu ) VALUES ( ? , ? );`,
+                            [ titre  , contenu ] ,
+                            function(transact, resultat){ 
+                                console.log( "INSERT réussi" );
+                                setTitre("")
+                                setContenu("")
+                            },
+                            function(transact , err){
+                                console.log( "INSERT échec" , err );
+                            }
+                        )
+        })
     }
   return (
     <View style={styles.box}>
