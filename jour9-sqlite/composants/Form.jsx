@@ -41,7 +41,7 @@ const Form = ({db}) => {
 
     function updateArticle(){
         // requete SQL UPDATE 
-        console.log(articleAModifier.id , titre, contenu); 
+        // console.log(articleAModifier.id , titre, contenu); 
         db.transaction(function(tx){
             tx.executeSql(`UPDATE articles SET titre = ? , contenu = ? WHERE id = ? ; ` ,
                     [ titre , contenu , articleAModifier.id ] ,
