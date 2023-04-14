@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View , Platform } from 'react-native';
 import * as SQLITE from "expo-sqlite"
 import {useEffect} from "react"
+import Form from './composants/Form';
 
 function openDB(){
   if(Platform.OS === "web"){
@@ -40,6 +41,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.titre}>Utiliser SQLITE dans React Native</Text>
+      <Form />
       <StatusBar style="auto" />
     </View>
   );
