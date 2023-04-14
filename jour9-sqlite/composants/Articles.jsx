@@ -1,8 +1,12 @@
 import { StyleSheet, Text, View, ScrollView , Button } from 'react-native'
-import React , { useEffect , useState } from 'react'
+import React , { useEffect , useState, useContext } from 'react'
+import { ArticleContext } from "../context/articleContext"
+
 const Articles = ({db}) => {
     
     const [articles , setArticles] = useState([])
+    const { modifier } = useContext(ArticleContext); 
+
     useEffect( function(){
         db.transaction(function(tx){
             // https://www.sqlite.org/lang_datefunc.html
@@ -42,7 +46,7 @@ const Articles = ({db}) => {
                         <Text>{ article.contenu }</Text>
                         <Text>{ article.date }</Text>
                         <View style={styles.actions}>
-                            <Button title="modifier" onPress={ () => {} } color="orange"/>
+                            <Button title="modifier" onPress={ () => modifier(article) } color="orange"/>
                             <Button title="supprimer" onPress={ () => supprimer(article.id) } color="red"/>
                         </View>
                     </View>
