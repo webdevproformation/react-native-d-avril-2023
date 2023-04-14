@@ -1,0 +1,5 @@
+Dans le composant Exo3 
+
+récupérer le profil utilisateur stocké dans le store  
+
+ajouter deux boutons => un premier qui permet de se connecter et un deuxieme qui permet de se déconnecter
