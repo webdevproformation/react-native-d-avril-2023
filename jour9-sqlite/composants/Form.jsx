@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View , TextInput , Button } from 'react-native'
 import React , {useState} from 'react'
 
-const Form = ({db}) => {
+const Form = ({db , useForceUpdate}) => {
+    
     const [titre, setTitre] = useState("")
     const [contenu, setContenu] = useState("")
     function ajouter(){
@@ -12,6 +13,7 @@ const Form = ({db}) => {
                                 console.log( "INSERT réussi" );
                                 setTitre("")
                                 setContenu("")
+                                
                             },
                             function(transact , err){
                                 console.log( "INSERT échec" , err );
@@ -21,10 +23,10 @@ const Form = ({db}) => {
     }
   return (
     <View style={styles.box}>
-      <Text style={styles.titre}>ajouter une nouvel article</Text>
+      <Text style={styles.titre}>ajouter un nouvel article</Text>
       <TextInput placeholder='titre' value={titre} onChangeText={(text) => setTitre(text)}  style={styles.input}/>
       <TextInput placeholder='contenu' value={contenu} onChangeText={(text) => setContenu(text) } 
-                multiline={true} numberOfLines={5}   style={styles.input} />
+                multiline={true} numberOfLines={2}   style={styles.input} />
        <Button onPress={ajouter} title="ajouter" />
     </View>
   )
