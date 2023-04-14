@@ -36,7 +36,7 @@ const Form = ({db}) => {
         setTitre("")
         setContenu("")
         setUpdate(false);
-        //viderArticle()
+        // viderArticle()
     }
 
     function updateArticle(){
@@ -55,7 +55,7 @@ const Form = ({db}) => {
             )
         })
     }
-
+    // rdv 15h30 bon café !!!!!!!!!!!!!!!!!!!!!!!
 
   return (
     <View style={styles.box}>
