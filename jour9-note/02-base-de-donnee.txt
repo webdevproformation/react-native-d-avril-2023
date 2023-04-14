@@ -57,6 +57,11 @@ fonction modifier => cette fonction afficher l'article que vous voulez modifier 
 
 lorsque vous cliquez sur le bouton modifier => 
 
+------------------------
+
+cas pratique 
+
+remplir le formulaire avec les données récupérée lorsque l'on a cliqué
 
 
 
