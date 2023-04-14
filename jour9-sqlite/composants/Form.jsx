@@ -3,7 +3,6 @@ import React , { useState , useContext, useEffect } from 'react'
 import {ArticleContext} from "../context/articleContext"
 
 const Form = ({db}) => {
-
     const [titre, setTitre] = useState("")
     const [contenu, setContenu] = useState("")
     const [ update , setUpdate ] = useState(false )
@@ -65,7 +64,7 @@ const Form = ({db}) => {
                 multiline={true} numberOfLines={2}   style={styles.input} />
        { update ? 
             <View style={{ flexDirection : "row" } } >
-                <Button onPress={updateArticle} title="modifier" color="pink" />
+                <Button onPress={updateArticle} title="valider modification" color="pink" />
                 <Button onPress={annuler} title="annuler" color="purple" />
             </View>
             : 
