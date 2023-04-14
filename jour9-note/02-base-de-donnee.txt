@@ -26,4 +26,10 @@ DELETE FROM articles WHERE id = 1
 mettre à jour la ligne numéro 1 
 UPDATE articles SET titre = "..." , contenu = "...." WHERE id = 1 ; 
 
+créer un composant formulaire 
+
+vous allez avoir deux champ TextInput 
+titre / contenu 
+button 
+récupérer les valeurs saisies dans chaque champ via le state local 
 
