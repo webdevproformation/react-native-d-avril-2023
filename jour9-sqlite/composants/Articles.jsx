@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, ScrollView , Button } from 'react-native'
 import React , { useEffect , useState } from 'react'
-const Articles = ({db, useForceUpdate}) => {
-    const [ update , setUpdate ] = useForceUpdate()
+const Articles = ({db}) => {
+    
     const [articles , setArticles] = useState([])
     useEffect( function(){
         db.transaction(function(tx){
@@ -19,6 +19,19 @@ const Articles = ({db, useForceUpdate}) => {
         })
     } , [articles]);
 
+    function supprimer(id){
+        db.transaction(function(tx){
+            tx.executeSql(`DELETE FROM articles WHERE id = ? `, 
+                    [id] , 
+                    function(transact, resultat){
+                        console.log("DELETE success"); 
+                    },
+                    function(transact , err){
+                        console.log("DELETE échec", err)
+                    })
+        })
+    }
+
   return (
     <ScrollView>
         <View style={styles.box}>
@@ -30,7 +43,7 @@ const Articles = ({db, useForceUpdate}) => {
                         <Text>{ article.date }</Text>
                         <View style={styles.actions}>
                             <Button title="modifier" onPress={ () => {} } color="orange"/>
-                            <Button title="supprimer" onPress={ () => {} } color="red"/>
+                            <Button title="supprimer" onPress={ () => supprimer(article.id) } color="red"/>
                         </View>
                     </View>
             } ) }
@@ -45,3 +58,5 @@ const styles = StyleSheet.create({
     article : { borderBottomWidth : 1 , borderBottomColor : "black" , paddingBottom : 10 , marginBottom : 10} , 
     actions : { flexDirection : "row" , justifyContent: "space-evenly" , marginVertical : 10}
 })
+
+// rdv 13h30 => bon appétit 

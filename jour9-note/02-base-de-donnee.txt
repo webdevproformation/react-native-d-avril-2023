@@ -34,3 +34,16 @@ button
 récupérer les valeurs saisies dans chaque champ via le state local 
 
 rdv 10h45 bon café !!!!
+
+
+cas pratique supprimer 
+associer une fonction qui s'appelle supprimer qui aura un paramètre id (de l'article à supprimer)
+
+dans le fonction supprimer 
+réaliser une transaction 
+la requête a exécuter => DELETE FROM articles WHERE id = ? 
+utilisez le tableau de variable pour lui passer l'id concerné 
+
+réaliser une deuxieme transaction SELECT * => setArticle => mise de la vue 
+
+
