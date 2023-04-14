@@ -1,0 +1,5 @@
+// https://www.youtube.com/watch?v=MGG-km9vR_E
+    // Faire quelquechose qui marche 
+    // quelquesoit la langage (java / javascript / python) quelquesoit la technique 
+    // https://www.youtube.com/watch?v=IT1rXrFVGKo
+    // https://www.blogdumoderateur.com/etude-github-langages-plus-utilises-tendances-open-source/
