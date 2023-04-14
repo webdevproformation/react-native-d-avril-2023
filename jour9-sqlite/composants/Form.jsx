@@ -6,12 +6,14 @@ const Form = ({db}) => {
 
     const [titre, setTitre] = useState("")
     const [contenu, setContenu] = useState("")
+    const [ update , setUpdate ] = useState(false )
 
     const {articleAModifier} = useContext( ArticleContext );
 
-    useEffect( function(){
+    useEffect( function() {
         setTitre(articleAModifier.titre)
         setContenu(articleAModifier.contenu)
+        setUpdate(true);
     }, [articleAModifier])
 
     function ajouter(){
@@ -30,13 +32,27 @@ const Form = ({db}) => {
                         )
         })
     }
+
+    function annuler(){
+        setTitre("")
+        setContenu("")
+        setUpdate(false);
+    }
   return (
     <View style={styles.box}>
       <Text style={styles.titre}>ajouter un nouvel article</Text>
       <TextInput placeholder='titre' value={titre} onChangeText={(text) => setTitre(text)}  style={styles.input}/>
       <TextInput placeholder='contenu' value={contenu} onChangeText={(text) => setContenu(text) } 
                 multiline={true} numberOfLines={2}   style={styles.input} />
-       <Button onPress={ajouter} title="ajouter" />
+       { update ? 
+            <View style={{ flexDirection : "row" } } >
+                <Button onPress={ajouter} title="modifier" color="pink" />
+                <Button onPress={annuler} title="annuler" color="purple" />
+            </View>
+            : 
+            <Button onPress={ajouter} title="ajouter" />
+        }
+       
     </View>
   )
 }
