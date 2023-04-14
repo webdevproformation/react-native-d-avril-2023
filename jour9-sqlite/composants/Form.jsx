@@ -4,7 +4,6 @@ import {ArticleContext} from "../context/articleContext"
 
 const Form = ({db}) => {
 
-    
     const [titre, setTitre] = useState("")
     const [contenu, setContenu] = useState("")
 
