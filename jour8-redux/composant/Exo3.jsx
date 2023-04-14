@@ -3,7 +3,8 @@ import React from 'react'
 import { useDispatch , useSelector } from "react-redux"
 
 const Exo3 = () => {
-    const profil = useSelector(store => store.reducerProfil)
+    
+  const profil = useSelector(store => store.reducerProfil)
   const dispatch = useDispatch()
 
   return (

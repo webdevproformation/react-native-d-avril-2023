@@ -1,0 +1,29 @@
+lorque l'application se lance 
+
+=> créer une base si elle n'existe pas (automatique via la librairie)
+
+=> créer une table si elle n'existe pas déjà 
+=> ce sera la table articles 
+
+CREATE TABLE IF NOT EXISTS articles (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    titre VARCHAR(200),
+    contenu TEXT ,
+    dt_creation DATETIME DEFAULT CURRENT_TIMESTAMP
+)
+-----------------
+formulaire => ajouter de nouveaux articles 
+deux TextInput 'titre' / contenu 
+
+=> INSERT INTO articles ( titre, contenu ) VALUES ( "..." , "..." );
+-------------------
+afficher tous les articles dans la table 
+=> SELECT * FROM articles ;
+-------------------
+supprimer une ligne 
+DELETE FROM articles WHERE id = 1 
+-------------------
+mettre à jour la ligne numéro 1 
+UPDATE articles SET titre = "..." , contenu = "...." WHERE id = 1 ; 
+
+

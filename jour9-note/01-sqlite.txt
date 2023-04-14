@@ -1,0 +1,14 @@
+stopper le projet en cours 
+cd ..
+npx create-expo-app --template 
+jour9-sqlite
+
+cd jour9-sqlite 
+
+npm i expo-sqlite
+
+npm run android 
+
+https://formation.webdevpro.net/react-native
+login : react-native
+password : facebook
