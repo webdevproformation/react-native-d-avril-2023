@@ -47,3 +47,16 @@ utilisez le tableau de variable pour lui passer l'id concerné
 réaliser une deuxieme transaction SELECT * => setArticle => mise de la vue 
 
 
+cas pratique modifier 
+
+créer un context articleContext 
+
+{ titre : "" , contenu : "" , id : 0}
+
+fonction modifier => cette fonction afficher l'article que vous voulez modifier dans la console 
+
+lorsque vous cliquez sur le bouton modifier => 
+
+
+
+

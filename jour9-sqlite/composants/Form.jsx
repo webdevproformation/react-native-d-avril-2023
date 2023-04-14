@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View , TextInput , Button } from 'react-native'
 import React , {useState} from 'react'
 
-const Form = ({db , useForceUpdate}) => {
+const Form = ({db}) => {
     
     const [titre, setTitre] = useState("")
     const [contenu, setContenu] = useState("")
