@@ -8,13 +8,13 @@ const Form = ({db}) => {
     const [contenu, setContenu] = useState("")
     const [ update , setUpdate ] = useState(false )
 
-    const {articleAModifier} = useContext( ArticleContext );
+    const {articleAModifier , viderArticle} = useContext( ArticleContext );
 
     useEffect( function() {
         setTitre(articleAModifier.titre)
         setContenu(articleAModifier.contenu)
         setUpdate(true);
-    }, [articleAModifier])
+    }, [articleAModifier.id])
 
     function ajouter(){
         db.transaction(function(tx){
@@ -32,12 +32,31 @@ const Form = ({db}) => {
                         )
         })
     }
-
     function annuler(){
         setTitre("")
         setContenu("")
         setUpdate(false);
+        //viderArticle()
     }
+
+    function updateArticle(){
+        // requete SQL UPDATE 
+        console.log(articleAModifier.id , titre, contenu); 
+        db.transaction(function(tx){
+            tx.executeSql(`UPDATE articles SET titre = ? , contenu = ? WHERE id = ? ; ` ,
+                    [ titre , contenu , articleAModifier.id ] ,
+                    function(transact, resultat){
+                        console.log("UPDATE success");
+                        annuler()
+                    },
+                    function(transact , err){
+                        console.log("UPDATE échec")
+                    }
+            )
+        })
+    }
+
+
   return (
     <View style={styles.box}>
       <Text style={styles.titre}>ajouter un nouvel article</Text>
@@ -46,7 +65,7 @@ const Form = ({db}) => {
                 multiline={true} numberOfLines={2}   style={styles.input} />
        { update ? 
             <View style={{ flexDirection : "row" } } >
-                <Button onPress={ajouter} title="modifier" color="pink" />
+                <Button onPress={updateArticle} title="modifier" color="pink" />
                 <Button onPress={annuler} title="annuler" color="purple" />
             </View>
             : 

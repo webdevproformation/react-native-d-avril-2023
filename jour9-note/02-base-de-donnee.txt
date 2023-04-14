@@ -65,3 +65,20 @@ remplir le formulaire avec les données récupérée lorsque l'on a cliqué
 
 
 
+modifier un article existant 
+
+2 étapes 
+
+1ère étape => récupérer l'article que l'on veut modifier 
+bouton modifier => récupérer le contenu de l'article 
+
+=> l'envoyer du composant Articles => Formulaire 
+Context => permet de pouvoir tranférer des informations d'un compsant à un autre 
+
+=> envoyer les informations vers Formulaire 
+=> useContext(ArticleContext)
+=> remplir le formulaire ET de pouvoir changer le bouton en dessous du formulaire par <modifier>  <Annuler>
+
+2ème les informations 
+=> UPDATE lorsque l'on clique sur le bouton modifier 
+

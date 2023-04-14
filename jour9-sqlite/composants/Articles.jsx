@@ -5,7 +5,7 @@ import { ArticleContext } from "../context/articleContext"
 const Articles = ({db}) => {
     
     const [articles , setArticles] = useState([])
-    const { modifier } = useContext(ArticleContext); 
+    const { modifier  } = useContext(ArticleContext); 
 
     useEffect( function(){
         db.transaction(function(tx){
