@@ -4,7 +4,7 @@ import { useSelector , useDispatch } from "react-redux"
 
 const C = () => {
     // permet de récupérer la valeur de notre state
-    const valeur = useSelector((state) => {return state})
+    const valeur = useSelector((store) => { return store.reducerNb })
     const dispatch = useDispatch() ; 
   return (
     <View>
